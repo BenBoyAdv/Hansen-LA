@@ -1,38 +1,109 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  position: fixed;
   display: flex;
   flex-direction: column;
+  flex-wrap: nowrap;
+  background-image: url('./Assets/Backgrounds/Background@2x.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+}
+
+.FContainer {
+  display: flex;
+  flex-flow: row nowrap;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.FBox {
+  height: 100%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.NavBar {
+  position: fixed;
+  height: 12.5%;
+  z-index: 3;
+  width: 100%;
+  min-width: 375px;
+}
+
+.Icon {
+  width: 10%;
+  height: 70%;
+  background-image: url("./Assets/Icons/hla_icon.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-left: 5%;
+  align-self: flex-end;
+}
+
+.CompanyTitle {
+  width: 30%;
+}
+
+.CompanyTitle p {
+  white-space: nowrap;
+  align-self: flex-end;
+  font-family: 'Karla', sans-serif;
+  font-size: 1.5em;
+  letter-spacing: 1.005em;
+  padding: 4%;
+}
+
+
+.Divider {
+  width: 5%;
+  height: 65%;
+  background-image: url("./Assets/Icons/Line\ 1.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.NavSelector {
+  width: 55%;
+}
+
+.NavSelector ul {
+  width: 100%;
+  list-style-type: none;
+}
+
+.NavSelector li {
+  width: 25%;
+}
+
+.NavSelector :link {
+  align-self: flex-end;
+  padding: 10%;
+  font-size: 1em;
+  font-family: 'Montserrat', sans-serif;
+}
+
+@media only screen and (max-width: 768px) {
+  .CompanyTitle p{
+      font-size: 1.3rem;
+      letter-spacing: 0.9em;
   }
-  to {
-    transform: rotate(360deg);
+
+  .NavSelector a {
+      font-size: .8em;
   }
+
+  .Icon {
+      height: 50%;
+  }
+
+}
+
+
+.Content {
+  align-self: flex-end;
+  /* background-color: blue; */
 }
