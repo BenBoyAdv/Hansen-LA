@@ -8,21 +8,17 @@ import './App.css';
 
 function App() {
 
-
   return (
     <div className="App">
       
-        <nav className="FContainer NavBar">
-          <ul className="FContainer FBox">
-            <li className="Icon FBox"></li>
-            <li className="CompanyTitle FBox FContainer">
-              <p>Hansen LA </p>
-            </li>
-            <li className="Divider FBox"></li>
-            <div className="NavSelector FBox FContainer">
-              <li className="FBox FContainer">
-                <Link to="/">HOME</Link>
-              </li>
+        <nav className="NavBar FContainer">
+          <div className="Icon FBox"></div>
+          <div className="CompanyTitle FBox FContainer">
+            <p>Hansen LA</p>
+          </div>
+          <div className="Divider FBox"></div>
+          <div className="NavSelector FContainer FBox">
+            <ul className="FBox FContainer">
               <li className="FBox FContainer">
                 <Link to="/Work">WORK</Link>
               </li>
@@ -30,10 +26,10 @@ function App() {
                 <Link to="/About">ABOUT</Link>
               </li>
               <li className="FBox FContainer">
-                <Link to="/Contact">CONTACT</Link>
+                <Link to="/Contact">Contact</Link>
               </li>
-            </div>
-          </ul>
+            </ul>
+          </div>
         </nav>
     
       <div className="Content">

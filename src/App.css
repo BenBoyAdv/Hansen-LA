@@ -6,11 +6,10 @@
 .App {
   position: fixed;
   display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
+  flex-flow: column nowrap;
   background-image: url('./Assets/Backgrounds/Background@2x.png');
   background-size: contain;
-  background-repeat: no-repeat;
+  background-repeat: repeat-x;
   width: 100%;
   height: 100%;
 }
