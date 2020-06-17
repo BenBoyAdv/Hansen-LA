@@ -3,106 +3,84 @@
   padding: 0;
   list-style: none;
 }
+
+
 .App {
-  position: fixed;
+  width: 100vw;
+  height: 100vh;
   display: flex;
   flex-flow: column nowrap;
-  background-image: url('./Assets/Backgrounds/Background@2x.png');
-  background-size: contain;
-  background-repeat: repeat-x;
-  width: 100%;
-  height: 100%;
+  background-image: linear-gradient(#B5E8BB, #FFFFFF 19%, #FFFFFF);
 }
 
-.FContainer {
+.flex-row {
   display: flex;
-  flex-flow: row nowrap;
-  align-items: center;
-  justify-content: center;
+  flex-direction: row;
 }
 
-.FBox {
-  height: 100%;
+.a-ht {
+  height: auto;
 }
 
-.NavBar {
-  position: fixed;
-  height: 12.5%;
-  z-index: 3;
-  width: 100%;
-  min-width: 375px;
-}
-
-.Icon {
-  width: 10%;
-  height: 70%;
-  background-image: url("./Assets/Icons/hla_icon.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  margin-left: 5%;
+.f-bottom {
   align-self: flex-end;
 }
 
-.CompanyTitle {
-  width: 30%;
+.nav-bar {
+  height: 15%;
 }
 
-.CompanyTitle p {
+.company-title {
   white-space: nowrap;
-  align-self: flex-end;
   font-family: 'Karla', sans-serif;
   font-size: 1.5em;
   letter-spacing: 1.005em;
-  padding: 4%;
 }
 
-
-.Divider {
-  width: 5%;
-  height: 65%;
-  background-image: url("./Assets/Icons/Line\ 1.png");
-  background-size: contain;
-  background-repeat: no-repeat;
+.nav-selector {
+  height: 100%;
+  width: 60%;
+  justify-content: flex-end;
 }
 
-.NavSelector {
-  width: 55%;
-}
-
-.NavSelector ul {
-  width: 100%;
-  list-style-type: none;
-}
-
-.NavSelector li {
+.nav-link {
+  align-content: flex-end;
   width: 25%;
-}
-
-.NavSelector :link {
-  align-self: flex-end;
-  padding: 10%;
-  font-size: 1em;
+  justify-content: center;
   font-family: 'Montserrat', sans-serif;
+  font-size: 0.8em;
 }
 
-@media only screen and (max-width: 768px) {
-  .CompanyTitle p{
-      font-size: 1.3rem;
-      letter-spacing: 0.9em;
-  }
-
-  .NavSelector a {
-      font-size: .8em;
-  }
-
-  .Icon {
-      height: 50%;
-  }
-
+a:link, a:visited  {
+  text-decoration: none;
+  color: #707070;
 }
 
+a:hover {
+  font-weight: bold;
+}
 
-.Content {
-  align-self: flex-end;
-  background-color: blue;
+.icon {
+  background-image: url(./Assets/Icons/Icon.png);
+  background-size: contain;
+  width: 10%;
+  height: 80%;
+  background-repeat: no-repeat;
+  margin-left: 1em;
+}
+
+.line-divider {
+  background-image: url(./Assets/Icons/Line\ 1.png);
+  background-size: contain;
+  height: 80%;
+  width: 5%;
+  background-repeat: no-repeat;
+  margin: 1%;
+}
+
+.content {
+  height: 85%;
+  padding: 2%;
+  border-radius: 25px 25px 0px 0px;
+  background-image: linear-gradient(to left,#F2FFF7, #FFFFF2 );
 }

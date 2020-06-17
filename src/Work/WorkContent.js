@@ -1,9 +1,35 @@
 import React from 'react';
-
+import {BrowserRouter as Router, Switch, Link, Route} from 'react-router-dom';
+import '../App.css';
+import PublicWork from './Public/Public';
+import EducationWork from './Education/Education';
+import MedicalWork from './Medical/Medical';
+import CommercialWork from './Commercial/Commercial';
 class WorkContent extends React.Component {
-    render() {
-        return <h1>Work Stuff</h1>
-    }
+  render() {
+    return (
+      <div className="work-content flex-column">
+
+          {/* Work Section Navigation */}
+
+            <ul className="a-ht flex-row">
+              <Link to="/Work/Public">Public</Link>
+              <Link to="/Work/Education">Education</Link>
+              <Link to="/Work/Medical">Medical</Link>
+              <Link to="/Work/Commercial">Commercial</Link>
+            </ul>
+
+      {/* Work category displays */}
+
+        <Switch className="a-ht">
+          <Route path="/Work/Public" component={PublicWork}/>
+          <Route path="/Work/Education" component={EducationWork}/>
+          <Route path="/Work/Medical" component={MedicalWork}/>
+          <Route path="/Work/Commercial" component={CommercialWork}/>
+        </Switch>
+      </div>
+    )
+  }
 }
 
 export default WorkContent;
