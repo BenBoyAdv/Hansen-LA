@@ -1,5 +1,5 @@
 import React from 'react';
-import {BrowserRouter as Router, Switch, Link, Route} from 'react-router-dom';
+import { Switch, Link, Route} from 'react-router-dom';
 import '../App.css';
 import PublicWork from './Public/Public';
 import EducationWork from './Education/Education';
@@ -12,8 +12,12 @@ class WorkContent extends React.Component {
 
           {/* Work Section Navigation */}
 
-            <ul className="a-ht flex-row">
+            <ul className="a-ht flex-row flex-betwen">
+              <div>
               <Link to="/Work/Public">Public</Link>
+              </div>
+
+              
               <Link to="/Work/Education">Education</Link>
               <Link to="/Work/Medical">Medical</Link>
               <Link to="/Work/Commercial">Commercial</Link>

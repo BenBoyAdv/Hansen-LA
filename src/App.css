@@ -18,6 +18,10 @@
   flex-direction: row;
 }
 
+.flex-between{
+  justify-content: space-between;
+}
+
 .a-ht {
   height: auto;
 }
@@ -63,6 +67,7 @@ a:hover {
 .icon {
   background-image: url(./Assets/Icons/Icon.png);
   background-size: contain;
+  min-width: 25px;
   width: 10%;
   height: 80%;
   background-repeat: no-repeat;
