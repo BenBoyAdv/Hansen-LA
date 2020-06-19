@@ -10,17 +10,17 @@ function Nav() {
           <div className="company-title self-bottom a-ht">Hansen LA</div>
           <div className="line-divider"></div>
           <div className="nav-selector flex-row self-bottom">
-            <Link to="/Home" className="flex-row nav-link">
-              <div className="a-ht self-bottom">HOME</div>
+            <Link to="/Home" className="flex-row nav-link a-end">
+              <div className="a-ht">HOME</div>
             </Link>
-            <Link to="/Work" className="flex-row nav-link">
-              <div className="a-ht self-bottom">WORK</div>
+            <Link to="/Work" className="flex-row nav-link a-end">
+              <div className="a-ht">WORK</div>
             </Link>
-            <Link to="/About" className="flex-row nav-link">
-              <div className="a-ht self-bottom">ABOUT</div>
+            <Link to="/About" className="flex-row nav-link a-end">
+              <div className="a-ht">ABOUT</div>
             </Link>
-            <Link to="/Contact" className="flex-row nav-link">
-              <div className="a-ht self-bottom">CONTACT</div>
+            <Link to="/Contact" className="flex-row nav-link a-end">
+              <div className="a-ht">CONTACT</div>
             </Link>
           </div>
         </nav>
