@@ -13,7 +13,7 @@ function App() {
     <div className="App">
       <Router>
       <Nav/>
-      <div className="content flex-col a-center">
+      <div className="content">
         <Switch>
           <Route path="/Work" component={WorkContent}/>
           <Route path="/About" component={AboutContent}/>

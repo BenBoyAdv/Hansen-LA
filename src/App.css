@@ -8,12 +8,16 @@ a:link, a:visited {
   text-decoration: none;
 }
 
+/* body {
+  overflow: hidden;
+} */
+
 
 .App {
   width: 100vw;
   height: 100vh;
-  display: flex;
-  flex-flow: column nowrap;
+  display: block;
+  /* flex-flow: column nowrap; */
   background-image: linear-gradient(#B5E8BB, #FFFFFF 19%, #FFFFFF);
 }
 
@@ -30,8 +34,17 @@ a:link, a:visited {
   justify-content: space-between;
 }
 
+
 .a-center {
   align-items: center;
+}
+
+.j-end {
+  justify-content: flex-end;
+}
+
+.j-start {
+  justify-content: flex-start;
 }
 
 .j-center {
@@ -111,25 +124,29 @@ a:link, a:visited {
 }
 
 .content {
-  height: 100%;
-  padding: 2%;
+  display: block;
   border-radius: 25px 25px 0px 0px;
   background-image: linear-gradient(to left,#F2FFF7, #FFFFF2 );
+  height: 85%;
 }
 
 .work-content {
-  margin-top: 4%;
+  display: block;
+  margin: 0% 10%;
   width: 80%;
-  height: 100%
+  height: 80%;
+  background-color: brown;
 }
 
 .work-nav {
-  width: 100%;
+  width: 80%;
+  margin: 0% 10%;
+  padding-top: 2%;
   height: 25%;
   justify-content: space-between;
 }
 
-.work-link:link, .work-link:visited {
+.work-link:link {
   text-decoration: none;
   height: 100%;
   width: 25%;
@@ -148,26 +165,28 @@ a:link, a:visited {
   opacity: 0.5;
 }
 
+
 #projects-container {
-  width: 92%;
-  margin-left: 5%;
+  width: 100%;
   height: 100%;
 }
 
 .project-box {
   border: black 1px solid;
-  height: 10em;
-  transition: height 0.8s, position 0.3s, bottom 0.3s;
+  background-color: cyan;
+  height: 5.5em;
+  transition: height 0.8s;
   background-size: cover;
 }
 
 .project-box:hover {
-  /* background-color: blueviolet; */
-  height: 15em;
-  position: relative;
-  bottom: 1em;
+  height: 10em;
+}
+
+.project-box:active {
+  height: 100%;
 }
 
 .project-1 {
-  background-image: url("./Assets/Backgrounds/Home\ Splash@2x.png");
+  /* background-image: url("./Assets/Backgrounds/Home\ Splash@2x.png"); */
 }

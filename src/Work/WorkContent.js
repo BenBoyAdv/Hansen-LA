@@ -10,9 +10,9 @@ class WorkContent extends React.Component {
   render() {
     return (
       <Router>
-      <div className="flex-col a-center work-content">
-          {/* Work Section Navigation */}
         <WorkNav/>
+      <div className="flex-col j-center a-center work-content">
+          {/* Work Section Navigation */}
             
       {/* Work category displays */}
 
