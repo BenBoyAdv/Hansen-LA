@@ -196,7 +196,7 @@ a:link, a:visited {
   border: black 1px solid;
   animation-name: boxGrow;
   animation-fill-mode: forwards;
-  animation-duration: 2s;
+  animation-duration: 1s;
 }
 
 @keyframes boxGrow
@@ -231,8 +231,8 @@ a:link, a:visited {
   background-size: contain;
   background-repeat: no-repeat;
   animation-name: closeFade;
-  animation-delay: 2s;
-  animation-duration: 1s;
+  animation-delay: 0.7s;
+  animation-duration: 0.5s;
   animation-fill-mode: forwards;
   opacity: 0.0;
 }
@@ -247,4 +247,45 @@ a:link, a:visited {
 {
   opacity: 1.0;
   background-image: url(./Assets/Icons/Close\ -\ X-hover.png);
+}
+
+.select-project{
+  height: 100%;
+  width: 100%;
+}
+
+@keyframes aTransition
+{
+  from {height: 100%; opacity: 1.0;}
+  to {height: 25%; opacity: 0.5;}
+}
+
+.a-transition
+{
+  height: 100%;
+  width: 100%;
+  background-color: violet;
+  opacity: 1.0;
+  border: black 1px solid;
+  animation-name: aTransition;
+  animation-fill-mode: forwards;
+  animation-duration: 1s;
+}
+
+@keyframes bTransition
+{
+  from{height: 0%; opacity: 0.0;}
+  to{height: 25%; opacity: 0.5;}
+}
+
+.b-transition
+{
+  height: 0%;
+  width: 100%;
+  background-color: violet;
+  opacity: 0.0;
+  border: black 1px solid;
+  animation-name: bTransition;
+  animation-fill-mode: forwards;
+  animation-duration: 1s;
 }
