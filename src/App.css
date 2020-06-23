@@ -222,3 +222,29 @@ a:link, a:visited {
   from {height: 25%; opacity: 0.5}
   to {height: 0%; opacity: 0.0}
 }
+
+.close-button
+{
+  height: 5%;
+  width: 5%;
+  background-image: url(./Assets/Icons/Close\ -\ X.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  animation-name: closeFade;
+  animation-delay: 2s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  opacity: 0.0;
+}
+
+@keyframes closeFade
+{
+  from {opacity: 0.0;}
+  to {opacity: 1.0;}
+}
+
+.close-button:hover 
+{
+  opacity: 1.0;
+  background-image: url(./Assets/Icons/Close\ -\ X-hover.png);
+}

@@ -6,8 +6,9 @@ class PublicWork extends React.Component {
 
     state = {activeIndex:null, anyActive:false}
 
+    closeBox = () => this.setState({activeIndex:null, anyActive:false})
     handleClick = index => this.setState({activeIndex:index, anyActive:true})
-
+    
     render () {
         const projects = 
         [
@@ -23,9 +24,11 @@ class PublicWork extends React.Component {
                         key={proj.name}
                         name={proj.name}
                         index={i}
-                        handleClick={this.handleClick}
                         isActive={this.state.activeIndex === i}
                         anyActive={this.state.anyActive}
+                        handleClick={this.handleClick}
+                        closeBox={this.closeBox}
+                        settings={this.state}
                     />
                 )
             })
