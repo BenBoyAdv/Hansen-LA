@@ -4,10 +4,20 @@ import '../../App.css';
 
 class PublicWork extends React.Component {
 
-    state = {activeIndex:null, anyActive:false}
+    state = {activeIndex:null, anyActive:false, transition:false}
 
-    closeBox = () => this.setState({activeIndex:null, anyActive:false})
-    handleClick = index => this.setState({activeIndex:index, anyActive:true})
+    closeBox = (index) => {
+        
+        this.setState({activeIndex:index, anyActive:true, transition:true})
+        // const transition = () =>{
+        //    this.setState({activeIndex:null, anyActive:false, transition:false})
+        // }
+        setTimeout(()=>{
+            this.setState({activeIndex:null, anyActive:false, transition:false})
+        },1000)
+    }
+
+    handleClick = index => this.setState({activeIndex:index, anyActive:true, transition:false})
     
     render () {
         const projects = 
@@ -26,6 +36,7 @@ class PublicWork extends React.Component {
                         index={i}
                         isActive={this.state.activeIndex === i}
                         anyActive={this.state.anyActive}
+                        isTransition={this.state.transition}
                         handleClick={this.handleClick}
                         closeBox={this.closeBox}
                         settings={this.state}
