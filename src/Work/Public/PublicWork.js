@@ -17,7 +17,12 @@ class PublicWork extends React.Component {
         },1000)
     }
 
-    handleClick = index => this.setState({activeIndex:index, anyActive:true, transition:false})
+    handleClick = index => {
+        let currentState = this.state.anyActive
+        !currentState ? (this.setState({activeIndex:index, anyActive:true, transition:false})) : 
+        (console.log('click off'))
+    }
+
     
     render () {
         const projects = 
