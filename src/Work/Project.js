@@ -55,23 +55,27 @@ class Project extends React.Component
             onClick={this.closeBox}
             className=
             {
-              (this.props.isActive && this.props.isTransition) ? '' :
-              this.props.isActive ? 'close-button' : ''
+              (this.props.isActive && this.props.isTransition) ? 'noClass' :
+              this.props.isActive ? 'close-button' : 'noClass'
             }
           ></div>
-          <div className="flex-row j-center">
+          <div className=
+            {
+              (this.props.isActive && this.props.isTransition) ? 'noClass' :
+              this.props.isActive ? 'flex-row j-center' : 'noClass'
+            }>
             <div
             className=
             {
-              (this.props.isActive && this.props.isTransition) ? '' :
-              this.props.isActive ? 'slideControls' : ''
+              (this.props.isActive && this.props.isTransition) ? 'noClass' :
+              this.props.isActive ? 'slideControls' : 'noClass'
             }
             onClick={this.prevSlide}></div>
             <div 
             className=
             {
-              (this.props.isActive && this.props.isTransition) ? '' :
-              this.props.isActive ? 'slideControls' : ''
+              (this.props.isActive && this.props.isTransition) ? 'noClass' :
+              this.props.isActive ? 'slideControls' : 'noClass'
             }
             onClick={this.nextSlide}></div>
           </div>

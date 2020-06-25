@@ -12,9 +12,6 @@ class WorkContent extends React.Component {
       <Router>
         <WorkNav/>
       <div className="flex-col j-center a-center work-content">
-          {/* Work Section Navigation */}
-            
-      {/* Work category displays */}
 
         <Switch className="a-ht">
           <div className="project-container flex-col j-center">
