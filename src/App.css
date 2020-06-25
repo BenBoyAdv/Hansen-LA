@@ -2,21 +2,23 @@
   margin: 0;
   padding: 0;
   list-style: none;
+  height: 100%;
 }
 
 a:link, a:visited {
   text-decoration: none;
 }
 
-/* body {
-  overflow: hidden;
-} */
+
+.fix{
+  position: fixed;
+}
 
 
 .App {
-  width: 100vw;
-  height: 100vh;
-  display: block;
+  width: 100%;
+  height: 100%;
+  /* display: block; */
   /* flex-flow: column nowrap; */
   background-image: linear-gradient(#B5E8BB, #FFFFFF 19%, #FFFFFF);
 }
@@ -67,10 +69,36 @@ a:link, a:visited {
   height: auto;
 }
 
+.f-opac {
+  opacity: 1.0;
+  transition: opacity 1s;
+}
+.h-opac {
+  opacity: 0.3;
+  transition: opacity 1s;
+}
+
+.nav-div {
+  height: 15%;
+}
 
 .nav-bar {
   height: 15%;
+  opacity: 1.0;
+  transition: height 1s;
 }
+
+.nav-out {
+  height: 0.1%;
+  opacity: 1.0;
+  transition: height 1s;
+  /* animation-name: navOut;
+  animation-delay: 2s;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards; */
+}
+
 
 .company-title {
   white-space: nowrap;
@@ -78,6 +106,7 @@ a:link, a:visited {
   font-size: 1.5em;
   letter-spacing: 1.005em;
   padding-bottom: 1%;
+  margin-left: 10%;
 }
 
 .nav-selector {
@@ -109,9 +138,18 @@ a:link, a:visited {
   background-size: contain;
   min-width: 25px;
   width: 10%;
-  height: 80%;
+  height: 15%;
   background-repeat: no-repeat;
   margin-left: 1em;
+  position: fixed;
+  top: 1em;
+  z-index: 5;
+  transition: 1s;
+}
+
+.icon2 {
+  background-image: url(./Assets/Icons/Group\ 1.png);
+  /* position: static; */
 }
 
 .line-divider {
@@ -124,25 +162,53 @@ a:link, a:visited {
 }
 
 .content {
-  display: block;
   border-radius: 25px 25px 0px 0px;
   background-image: linear-gradient(to left,#F2FFF7, #FFFFF2 );
   height: 85%;
+  transition: height 1.5s;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
+.c-selected {
+  border-radius: 25px 25px 0px 0px;
+  background-image: linear-gradient(to left,#F2FFF7, #FFFFF2 );
+  height: 100%;
+  transition: height 1.5s;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.menu-button {
+  height: 2em;
+  width: 3em;
+  position: fixed;
+  right: 5%;
+  top: 16%;
+  background-image: url(./Assets/Icons/Menu\ Button.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: height 1s opacity 1s;
+}
+
+
 .work-content {
-  display: block;
+  /* display: block; */
   margin: 0% 10%;
-  width: 80%;
-  height: 80%;
+  /* width: 80%; */
+  height: 75%;
   border: black 2px solid;
 }
 
 .work-nav {
-  width: 80%;
+  /* width: 80%; */
   margin: 0% 10%;
   padding-top: 2%;
-  height: 25%;
+  height: 20%;
   justify-content: space-between;
 }
 
@@ -313,6 +379,14 @@ a:link, a:visited {
   animation-duration: 0.5s;
   animation-fill-mode: forwards;
   opacity: 0.0;
+}
+
+.noClass {
+  height: 0px;
+}
+
+.noOpac {
+  opacity: 0;
 }
 
 .photo1 {
