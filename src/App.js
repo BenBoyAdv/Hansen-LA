@@ -9,14 +9,20 @@ import './App.css';
 
 class App extends React.Component 
 {
-  state={inContent: false, inHome: true}
+  state={inContent: false, inHome: true, inWork: false, isPageTransition: false}
 
   pageClick = () => {
     this.setState({inContent:true, inHome:false}) 
     console.log(this.state.inContent) 
 }
 
-  menuClick= () => this.setState({inContent: false, inHome: false})
+  menuClick= () => {
+    this.setState({inContent: false, inHome:false, inWork:false, isPageTransition: true})
+    
+    setTimeout(()=>this.setState({inContent: false, inHome: false, inWork:false, isPageTransition: false}),2000)
+  }
+
+  workClick= () => this.setState({inContent: true, inHome: false, inWork: true, isPageTransition: false})
 
   homeClick = () => {
     this.setState({inContent: false, inHome:true})
@@ -26,7 +32,7 @@ class App extends React.Component
     return (
       <div className="App">
         <Router>
-        <Nav pageClick={this.pageClick} homeClick={this.homeClick} inContent={this.state.inContent}/>
+        <Nav isPageTransition={this.state.isPageTransition} pageClick={this.pageClick} homeClick={this.homeClick} inWork={this.state.inWork} workClick={this.workClick} inContent={this.state.inContent}/>
         <div onClick={this.menuClick} className={this.state.inContent ? 'menu-button' : 'noClass'}></div>
         <div className={this.state.inHome ? 'content' :
           this.state.inContent && !this.state.inHome ? 'c-selected' : 'content'  
