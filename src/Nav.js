@@ -6,28 +6,32 @@ class Nav extends React.Component
 {
   pageClick = () => this.props.pageClick()
   homeClick = () => this.props.homeClick()
+  workClick= () => this.props.workClick()
+  navLinks = [
+    {name: 'HOME', divClass: 'link-text', class1: 'i-block nav-link', onClick: this.homeClick, to: '/Home'},
+    {name: 'WORK', divClass: 'link-text', class1: 'i-block nav-link', onClick: this.workClick, to: '/Work/Public'},
+    {name: 'ABOUT', divClass: 'link-text', class1: 'i-block nav-link', onClick: this.pageClick, to: '/About'},
+    {name: 'CONTACT', divClass: 'link-text', class1: 'i-block nav-link', onClick: this.pageClick, to: '/Contact'},
+  ]
   render()
   {
     return (
       // <div className="nav-div">
-          <nav className={this.props.inContent ? "nav-out flex-row" : "nav-bar flex-row"}>
-            <div className={this.props.inContent ? "icon icon2": "icon"}></div>
-            <div className="company-title self-bottom a-ht">Hansen LA</div>
-            <div className="line-divider"></div>
-            <div className="nav-selector flex-row self-bottom">
-              <Link onClick={this.homeClick} to="/Home" className="flex-row nav-link a-end">
-                <div className="a-ht">HOME</div>
-              </Link>
-              <Link onClick={this.pageClick} to="/Work/Public" className="flex-row nav-link a-end">
-                <div className="a-ht">WORK</div>
-              </Link>
-              <Link onClick={this.pageClick} to="/About" className="flex-row nav-link a-end">
-                <div className="a-ht">ABOUT</div>
-              </Link>
-              <Link onClick={this.pageCLick} to="/Contact" className="flex-row nav-link a-end">
-                <div className="a-ht">CONTACT</div>
-              </Link>
-            </div>
+          <nav className='nav-bar'>
+            <div className="icon-wrap"><div className="icon i-block"></div></div>
+            <div className="company-wrap i-block"><div className='company-title'>Hansen LA</div></div>
+            <div className="div-wrap"><div className="line-divider i-block"></div></div>
+            
+            {this.navLinks.map((proj) => {
+              return (<Link
+                className={proj.class1} 
+                onClick={proj.onClick} 
+                to={proj.to}
+              >
+              <div className={proj.divClass}>{proj.name}</div>
+              </Link>)
+            })}
+
           </nav>
       // </div>
     )
