@@ -21,6 +21,7 @@ a:link, a:visited {
 
 
 .App {
+  position: absolute;
   display: block;
   height: 1080px;
   width: 100vw;
@@ -97,7 +98,6 @@ a:link, a:visited {
   z-index: 3;
   height: 6em;
   width: 100%;
-  transition: 0.5s
 }
 
 .icon-wrap{
@@ -114,18 +114,41 @@ a:link, a:visited {
   height: 3em;
   z-index: 3;
   background-repeat: no-repeat;
-  transition: background-image 0.5s;
 }
 
 .icon2 {
   background-image: url(./Assets/Icons/Group\ 1.png);
-  transition: background-image 0.5s;
 }
 
 .company-wrap {
   width: 20em;
   height: 3em;
-  transition: 1s
+}
+
+.company-wrap-transition-A {
+  width: 20em;
+  height: 3em;
+  animation-name: cWrapTransA;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes cWrapTransA {
+  from{width: 20em;}
+  to{width: 0.01vw;}
+}
+
+.company-wrap-transition-B {
+  width: 20em;
+  height: 3em;
+  animation-name: cWrapTransB;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes cWrapTransB {
+  from{width: 0.01vw;}
+  to{width: 20em;}
 }
 
 .company-title {
@@ -137,14 +160,77 @@ a:link, a:visited {
   font-family: 'Karla', sans-serif;
   font-size: 1.5em;
   letter-spacing: 0.9em;
-  transition: opacity 0.5s width 1s height 1s;
+}
+
+.company-title-transition-A{
+  display: inline-block;
+  opacity: 1.0;
+  text-align: center;
+  width: 25vw;
+  white-space: nowrap;
+  font-family: 'Karla', sans-serif;
+  font-size: 1.5em;
+  letter-spacing: 0.9em;
+  animation-name: cTitleTransA;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes cTitleTransA{
+  from {opacity: 1.0; width: 25vw;}
+  to {opacity: 0.0; width: 0.01vw}
+}
+
+.company-title-transition-B{
+  display: inline-block;
+  opacity: 0.0;
+  text-align: center;
+  width: 0.01vw;
+  white-space: nowrap;
+  font-family: 'Karla', sans-serif;
+  font-size: 1.5em;
+  letter-spacing: 0.9em;
+  animation-name: cTitleTransB;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes cTitleTransB{
+  from {opacity: 0.0; width: 0.01vw}
+  to {opacity: 1.0; width: 25vw;}
 }
 
 .div-wrap {
   height: 100%;
   width: 20%;
   padding-top: 1em;
-  transition: 1s
+}
+.div-wrap-transition-A {
+  height: 100%;
+  width: 20%;
+  padding-top: 1em;
+  animation-name: divWrapTransA;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes divWrapTransA {
+  from{width: 20%;}
+  to{width: 0%;}
+}
+
+.div-wrap-transition-B {
+  height: 100%;
+  width: 0%;
+  padding-top: 1em;
+  animation-name: divWrapTransB;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes divWrapTransB {
+  from{width: 0%;}
+  to{width: 20%;}
 }
 
 .line-divider {
@@ -154,7 +240,40 @@ a:link, a:visited {
   width: 3em;
   opacity: 1.0;
   background-repeat: no-repeat;
-  transition: opacity 0.5s height 1s width 1s;
+}
+
+.line-divider-transition-A {
+  background-image: url(./Assets/Icons/Line1.png);
+  background-size: contain;
+  height: 90%;
+  width: 3em;
+  opacity: 1.0;
+  background-repeat: no-repeat;
+  animation-name: lineDivTransA;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes  lineDivTransA {
+  from{opacity: 1.0em; width: 3em;}
+  to{opacity: 0.0em; width: 0.01vw;}
+}
+
+.line-divider-transition-B {
+  background-image: url(./Assets/Icons/Line1.png);
+  background-size: contain;
+  height: 90%;
+  width: 0.01vw;
+  opacity: 0.0;
+  background-repeat: no-repeat;
+  animation-name: lineDivTransB;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes  lineDivTransB {
+  from{opacity: 0.0em; width: 0.01vw;}
+  to{opacity: 1.0em; width: 3em;}
 }
 
 .nav-link{
@@ -171,26 +290,118 @@ a:link, a:visited {
   padding-bottom: 1em;
   font-family: 'Montserrat', sans-serif;
   font-size: 0.8em;
-  transition: opacity 0.5s width 1s height 1s;
 }
 
 .nav-link:hover {
   font-weight: bold;
-  transition: 1s
+  
 }
+
+.link-transition-in-A {
+  width: 12vw;
+  opacity: 1.0;
+  padding-bottom: 1em;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.8em;
+  animation-name: linkTransInA;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes linkTransInA {
+  from  {font-size: 0.8em; padding-bottom: 1em;}
+  to  {
+    font-size: 2em;
+    font-weight: bold;
+    padding-bottom: 0em;
+  }
+}
+
+.link-transition-in-B {
+  width: 12vw;
+  opacity: 1.0;
+  padding-bottom: 0em;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2em;
+  font-weight: bold;
+  animation-name: linkTransInB;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes linkTransInB {
+  from  {
+    font-size: 2em;
+    font-weight: bold;
+    padding-bottom: 0em;
+  }
+  to  {
+    font-size: 0.8em;
+    padding-bottom: 1em;
+  }
+  }
+  
+.link-transition-out-A {
+ width: 12vw;
+  opacity: 1.0;
+  padding-bottom: 1em;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.8em;
+  animation-name: transOutA;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes transOutA {
+  from  {
+    font-size: 0.8em;
+    opacity: 1.0;
+    width: 12vw;
+  }
+  to  {
+    font-size: 0.0em;
+    opacity: 0.0;
+    width: 0.01vw;
+  }
+}
+
+.link-transition-out-B {
+  width: 0.01vw;
+  opacity: 0.0;
+  padding-bottom: 1em;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.0em;
+  animation-name: transOutB;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes transOutB {
+  from  {
+    font-size: 0.0em;
+    opacity: 0.0;
+    width: 0.01vw;
+  }
+  to  {
+    font-size: 0.8em;
+    opacity: 1.0;
+    width: 12vw;
+  }
+}
+
+
 
 .page-title {
   width: 12vw;
   font-family: 'Montserrat', sans-serif;
   font-size: 2em;
   font-weight: bold;
-  transition: 0.3s;
 }
 
 .link-text{
   text-align: center;
   width: 12vw;
-  transition: 1s
+  
 }
 
 /* @media only screen and (max-width: 1380px) {
@@ -207,7 +418,6 @@ a:link, a:visited {
   height: auto;
   left: 59.5%;
   top: 15%;
-  transition: all 1s;
 }
 
 .homeWork{
@@ -216,16 +426,17 @@ a:link, a:visited {
 
 .content {
   position: absolute;
-  bottom: 0;
+  display: block;
+  /* bottom: 0; */
   border-radius: 25px 25px 0px 0px;
   background-image: linear-gradient(to left,#F2FFF7, #FFFFF2 );
-  height: 86vh;
+  height: 100%;
   width: 100vw;
   top: 6em;
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
-  transition: height 0.5s;
   z-index: 1;
+  transition: 1s;
 }
 
 
@@ -235,15 +446,17 @@ a:link, a:visited {
 
 .c-selected {
   position: absolute;
-  bottom: 0;
+  /* display: block; */
+  bottom: 0em;
+  top: 0;
   border-radius: 25px 25px 0px 0px;
   background-image: linear-gradient(to left,#F2FFF7, #FFFFF2 );
   height: 100vh;
   width: 100vw;
-  z-index: 2;
+  z-index: 1;
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
-  transition: height 0.5s;
+  transition: 1s;
 }
 
 .menu-button {
@@ -266,7 +479,7 @@ a:link, a:visited {
   /* width: 80%; */
   height: 75vh;
   border: black 2px solid;
-  transition: 1s
+  
 }
 
 .work-nav {
