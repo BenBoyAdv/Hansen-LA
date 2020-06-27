@@ -18,16 +18,23 @@ class App extends React.Component
     this.setState({inContent: true, inHome: false, activePage:index})
 }
 
-  menuClick = () => {this.setState({inContent:false})}
+  menuClick = () => {this.setState({inContent:false, activePage: null})}
 
-
+  isActive = (index) => {
+    return (
+    (this.state.activePage === index) ?
+    'h-full page-title flex-row a-end' :
+    this.state.inContent ? 'flex-row a-end nav-link noClass' :
+    'h-full nav-link flex-row a-end'
+    )
+  }
 
   
   navLinks = [
-    {name: 'HOME', divClass: 'link-text', class1: 'h-full nav-link flex-row a-end', pageIn: 'pageIn', pageOut: 'pageOut', onClick: this.pageClick, to: '/Home'},
-    {name: 'WORK', divClass: 'link-text', class1: 'h-full nav-link flex-row a-end', pageIn: 'pageIn', pageOut: 'pageOut', onClick: this.pageClick, to: '/Work/Public'},
-    {name: 'ABOUT', divClass: 'link-text', class1: 'h-full nav-link flex-row a-end', pageIn: 'pageIn', pageOut: 'pageOut', onClick: this.pageClick, to: '/About'},
-    {name: 'CONTACT', divClass: 'link-text', class1: 'h-full nav-link flex-row a-end', pageIn: 'pageIn', pageOut: 'pageOut', onClick: this.pageClick, to: '/Contact'}
+    {name: 'HOME', divClass: 'link-text', class1: this.isActive,  onClick: this.pageClick, to: '/Home'},
+    {name: 'WORK', divClass: 'link-text', class1: this.isActive,  onClick: this.pageClick, to: '/Work/Public'},
+    {name: 'ABOUT', divClass: 'link-text', class1: this.isActive,  onClick: this.pageClick, to: '/About'},
+    {name: 'CONTACT', divClass: 'link-text', class1: this.isActive,  onClick: this.pageClick, to: '/Contact'}
   ]
   render()
   {
@@ -36,20 +43,31 @@ class App extends React.Component
       <div className="App">
         <Router>
         <div className="nav-bar flex-row a-end">
-          <div className="h-full flex-row a-end icon-wrap"><div className={this.state.inContent? "icon icon2":"icon"}></div></div>
-          <div className="company-wrap i-block"><div className='company-title'>Hansen LA</div></div>
-          <div className="div-wrap flex-row a-center j-center"><div className="line-divider i-block"></div></div>
+
+          <div className="h-full flex-row a-end icon-wrap">
+            <div className={this.state.inContent? "icon icon2":"icon"}></div>
+          </div>
+
+          <div className={this.state.inContent ? "company-wrap noClass" :"company-wrap"}>
+            <div className={this.state.inContent? 'company-title noClass':'company-title'}>Hansen LA</div>
+          </div>
+
+          <div className={this.state.inContent ? "div-wrap flex-row a-center j-center noClass":"div-wrap flex-row a-center j-center"}>
+            <div className={this.state.inContent? "line-divider noClass":"line-divider"}></div>
+          </div>
+
           <div className="flex-row h-full a-end">  
-          {this.navLinks.map((navItem,i)=>{
-            return (<NavLink
-              name={navItem.name}
-              index={i}
-              pageClick={this.pageClick}
-              divClass={navItem.divClass}
-              class1={navItem.class1}
-              destPath={navItem.to}
-            />)
-          })}
+            {this.navLinks.map((navItem,i)=>{
+              return (<NavLink
+                name={navItem.name}
+                index={i}
+                isActive={this.isActive}
+                pageClick={this.pageClick}
+                divClass={navItem.divClass}
+                class1={navItem.class1}
+                destPath={navItem.to}
+              />)
+            })}
           </div>
         </div> 
         
