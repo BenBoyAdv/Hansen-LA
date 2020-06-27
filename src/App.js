@@ -10,22 +10,34 @@ import './App.css';
 
 class App extends React.Component 
 {
-  state={inContent: false, inHome: true, inWork: false, isPageTransition: false, activePage: null}
+  state={pageTransition: 0, activePage: null, content: false}
 
   pageClick = (index) => {
-    (index === 0) ?
-    this.setState({inContent:false, inHome:true, activePage: index}): 
-    this.setState({inContent: true, inHome: false, activePage:index})
-}
+    this.setState({activePage: index, pageTransition: 1, content: true})
+    // setTimeout(()=>this.setState({activePage: index, pageTransition: 0}),1000)
+  }
 
-  menuClick = () => {this.setState({inContent:false, activePage: null})}
+  menuClick = () => {
+    let index = this.state.activePage
+    this.setState({activePage: index, pageTransition: 2, content:false})
+    setTimeout(()=>this.setState({activePage: null, pageTransition: 0, content:false}),1000)
+  }
 
   isActive = (index) => {
     return (
-    (this.state.activePage === index) ?
-    'h-full page-title flex-row a-end' :
-    this.state.inContent ? 'flex-row a-end nav-link noClass' :
-    'h-full nav-link flex-row a-end'
+    (this.state.activePage === index && this.state.pageTransition === 1) ?
+    'h-full link-transition-in-A flex-row a-end' :
+    (this.state.activePage === index && this.state.pageTransition === 2) ? 
+    'flex-row a-end link-transition-in-B' :
+    // (this.state.activePage === index && this.state.pageTransition === 0) ?
+    // 'h-full page-title flex-row a-end' :
+    (this.state.activePage > 0 && this.state.activePage !== index && this.state.pageTransition === 1)?
+    'h-full link-transition-out-A flex-row a-end' :
+    (this.state.activePage > 0 && this.state.activePage !== index && this.state.pageTransition === 2)?
+    'h-full link-transition-out-B flex-row a-end' : 
+    // (this.state.activePage > 0 && this.state.activePage !== index && this.state.pageTransition === 0)?
+    // 'h-full noClass flex-row a-end' : 
+    'h-full nav-link flex-row a-end' 
     )
   }
 
@@ -45,15 +57,37 @@ class App extends React.Component
         <div className="nav-bar flex-row a-end">
 
           <div className="h-full flex-row a-end icon-wrap">
-            <div className={this.state.inContent? "icon icon2":"icon"}></div>
+            <div className={(this.state.activePage > 0)? "icon icon2":"icon"}></div>
           </div>
 
-          <div className={this.state.inContent ? "company-wrap noClass" :"company-wrap"}>
-            <div className={this.state.inContent? 'company-title noClass':'company-title'}>Hansen LA</div>
+          <div className={
+            (this.state.activePage > 0 && this.state.pageTransition === 1) ? "company-wrap-transition-A" :
+            (this.state.activePage > 0 && this.state.pageTransition === 2) ? "company-wrap-transition-B":
+            "company-wrap"
+            }
+          >
+            <div className={
+              (this.state.activePage > 0 && this.state.pageTransition === 1) ? "company-title-transition-A" :
+              (this.state.activePage > 0 && this.state.pageTransition === 2) ? "company-title-transition-B":
+              "company-title"
+              }
+            >
+              Hansen LA
+            </div>
           </div>
 
-          <div className={this.state.inContent ? "div-wrap flex-row a-center j-center noClass":"div-wrap flex-row a-center j-center"}>
-            <div className={this.state.inContent? "line-divider noClass":"line-divider"}></div>
+          <div className={
+            (this.state.activePage > 0 && this.state.pageTransition === 1) ? "div-wrap-transition-A flex-row a-center j-center":
+            (this.state.activePage > 0 && this.state.pageTransition === 2) ? "div-wrap-transition-B flex-row a-center j-center":
+            "div-wrap flex-row a-center j-center"
+            }
+          >
+            <div className={
+              (this.state.activePage > 0 && this.state.pageTransition === 1) ? "line-divider-transition-A":
+              (this.state.activePage > 0 && this.state.pageTransition === 2) ? "Line-divider-transition-B":
+              "line-divider"
+              }
+            ></div>
           </div>
 
           <div className="flex-row h-full a-end">  
@@ -71,12 +105,17 @@ class App extends React.Component
           </div>
         </div> 
         
-        <div onClick={this.menuClick} className={this.state.inContent ? 'menu-button' : 'noClass'}></div>
-        <div className={this.state.inHome ? 'content' :
-          this.state.inContent && !this.state.inHome ? 'c-selected' : 'content'  
-        }>
-          <div className={this.state.inHome ? 'f-opac' :
-          this.state.inContent && !this.state.inHome ? 'f-opac' : 'h-opac'  
+        <div onClick={this.menuClick} className={(this.state.activePage > 0) ? 'menu-button' : 'noClass'}></div>
+        <div className=
+          {
+            (this.state.activePage === 0) ? 'content' :
+            (this.state.content) ? 'c-selected' :
+            (this.state.activePage && !this.state.content) ? 'content' :
+            'content' 
+          }
+        >
+          <div className={(this.state.activePage === 0) ? 'f-opac' :
+          (this.state.activePage > 0) ? 'f-opac' : 'h-opac'  
         }>
           <Switch>
             <Route path="/Work/Public" component={WorkContent}/>
