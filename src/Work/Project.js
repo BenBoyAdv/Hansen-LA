@@ -1,5 +1,4 @@
 import React from 'react';
-// import CloseBox from '../CloseBox';
 import '../App.css';
 
 
