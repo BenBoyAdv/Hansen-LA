@@ -8,13 +8,11 @@ class Project extends React.Component
 
   handleClick = () => {
     this.props.handleClick(this.props.index)
-    // console.log(props.settings)
   }
 
   closeBox = () => {
     this.props.closeBox(this.props.index)
     this.setState({activeSlide:0})
-    console.log(this.props.settings)
   }
 
   nextSlide = () => {
