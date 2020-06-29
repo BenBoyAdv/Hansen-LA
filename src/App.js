@@ -57,7 +57,7 @@ class App extends React.Component
         <div className="nav-bar flex-row a-end">
 
           <div className="h-full flex-row a-end icon-wrap">
-            <div className={(this.state.activePage > 0)? "icon icon2":"icon"}></div>
+            <div className={(this.state.activePage > 0 && this.state.content)? "icon icon2":"icon"}></div>
           </div>
 
           <div className={
@@ -84,7 +84,7 @@ class App extends React.Component
           >
             <div className={
               (this.state.activePage > 0 && this.state.pageTransition === 1) ? "line-divider-transition-A":
-              (this.state.activePage > 0 && this.state.pageTransition === 2) ? "Line-divider-transition-B":
+              (this.state.activePage > 0 && this.state.pageTransition === 2) ? "line-divider-transition-B":
               "line-divider"
               }
             ></div>
@@ -105,7 +105,7 @@ class App extends React.Component
           </div>
         </div> 
         
-        <div onClick={this.menuClick} className={(this.state.activePage > 0) ? 'menu-button' : 'noClass'}></div>
+        <div onClick={this.menuClick} className={(this.state.content) ? 'menu-button' : 'menu-button noClass'}></div>
         <div className=
           {
             (this.state.activePage === 0) ? 'content' :
