@@ -114,10 +114,12 @@ a:link, a:visited {
   height: 3em;
   z-index: 3;
   background-repeat: no-repeat;
+  transition: background-image 1s;
 }
 
 .icon2 {
   background-image: url(./Assets/Icons/Group\ 1.png);
+  transition: background-image 1s;
 }
 
 .company-wrap {
@@ -177,8 +179,14 @@ a:link, a:visited {
 }
 
 @keyframes cTitleTransA{
-  from {opacity: 1.0; width: 25vw;}
-  to {opacity: 0.0; width: 0.01vw}
+  /* from {opacity: 1.0; width: 25vw;}
+  to {opacity: 0.0; width: 0.01vw} */
+
+  25% {opacity: 0.0;}
+  100% {
+    width: 0.01vw;
+    opacity: 0.0;
+  }
 }
 
 .company-title-transition-B{
@@ -215,8 +223,7 @@ a:link, a:visited {
 }
 
 @keyframes divWrapTransA {
-  from{width: 20%;}
-  to{width: 0%;}
+  100% {width: 0%;}
 }
 
 .div-wrap-transition-B {
@@ -229,8 +236,8 @@ a:link, a:visited {
 }
 
 @keyframes divWrapTransB {
-  from{width: 0%;}
-  to{width: 20%;}
+  0%{width: 0%}
+  100% {width: 20%}
 }
 
 .line-divider {
@@ -272,8 +279,8 @@ a:link, a:visited {
 }
 
 @keyframes  lineDivTransB {
-  from{opacity: 0.0em; width: 0.01vw;}
-  to{opacity: 1.0em; width: 3em;}
+  from{opacity: 0.0; width: 0.01vw;}
+  to{opacity: 1.0; width: 3em;}
 }
 
 .nav-link{
@@ -288,13 +295,13 @@ a:link, a:visited {
   width: 12vw;
   opacity: 1.0;
   padding-bottom: 1em;
+  font-weight: 400;
   font-family: 'Montserrat', sans-serif;
   font-size: 0.8em;
 }
 
 .nav-link:hover {
-  font-weight: bold;
-  
+  font-weight: 700;
 }
 
 .link-transition-in-A {
@@ -353,16 +360,11 @@ a:link, a:visited {
 }
 
 @keyframes transOutA {
-  from  {
-    font-size: 0.8em;
-    opacity: 1.0;
-    width: 12vw;
-  }
-  to  {
-    font-size: 0.0em;
-    opacity: 0.0;
-    width: 0.01vw;
-  }
+  
+  25% {opacity: 0.0}
+  
+  100% {font-size: 0.0em;
+    width: 0.01vw;}
 }
 
 .link-transition-out-B {
@@ -377,7 +379,7 @@ a:link, a:visited {
 }
 
 @keyframes transOutB {
-  from  {
+  /* from  {
     font-size: 0.0em;
     opacity: 0.0;
     width: 0.01vw;
@@ -386,6 +388,16 @@ a:link, a:visited {
     font-size: 0.8em;
     opacity: 1.0;
     width: 12vw;
+  } */
+  
+  60% {
+    opacity: 0.0
+  }
+  
+  100% {
+    font-size: 0.8em;
+    width: 12vw;
+    opacity: 1.0
   }
 }
 
@@ -663,6 +675,7 @@ a:link, a:visited {
   height: 0.1%;
   width: 0.0%;
   opacity: 0;
+  transition: opacity 1s;
 }
 
 .noOpac {
