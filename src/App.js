@@ -16,18 +16,24 @@ class App extends React.Component
     this.setState({activePage: index, pageTransition: 1, content: true})
     // setTimeout(()=>this.setState({activePage: index, pageTransition: 0}),1000)
   }
+  
+  workClick = () => {
+    const index = this.state.activePage
+    this.setState({activePage: index, pageTransition: 1, content: true})
+    // setTimeout(()=>this.setState({activePage: index, pageTransition: 0, content:true}),1000)
+  }
 
   menuClick = () => {
-    let index = this.state.activePage
+    let index = this.state.activePage;
     this.setState({activePage: index, pageTransition: 2, content:false})
-    setTimeout(()=>this.setState({activePage: null, pageTransition: 0, content:false}),1000)
+    setTimeout(()=>this.setState({activePage: index, pageTransition: 0, content:false}),1000)
   }
 
   isActive = (index) => {
     return (
-    (this.state.activePage === index && this.state.pageTransition === 1) ?
+    (this.state.activePage !== 0 && this.state.activePage === index && this.state.pageTransition === 1) ?
     'h-full link-transition-in-A flex-row a-end' :
-    (this.state.activePage === index && this.state.pageTransition === 2) ? 
+    (this.state.activePage !== 0 && this.state.activePage === index && this.state.pageTransition === 2) ? 
     'flex-row a-end link-transition-in-B' :
     // (this.state.activePage === index && this.state.pageTransition === 0) ?
     // 'h-full page-title flex-row a-end' :
@@ -105,17 +111,28 @@ class App extends React.Component
           </div>
         </div> 
         
-        <div onClick={this.menuClick} className={(this.state.content) ? 'menu-button' : 'menu-button noClass'}></div>
+        <div onClick={this.menuClick} className={(this.state.activePage !==0 && this.state.content) ? 'menu-button' : 'menu-button noClass'}></div>
+
+        {/* content display settings */}
+
         <div className=
           {
             (this.state.activePage === 0) ? 'content' :
-            (this.state.content) ? 'c-selected' :
+            (this.state.activePage > 0 && this.state.pageTransition === 1) ? "content content-transition-A":
+            (this.state.activePage > 0 && this.state.pageTransition === 2) ? "c-selected content-transition-B":
+            (this.state.activePage > 0 && this.state.pageTransition === 0 && this.state.content) ? 'c-selected' :
             (this.state.activePage && !this.state.content) ? 'content' :
             'content' 
           }
         >
-          <div className={(this.state.activePage === 0) ? 'f-opac' :
-          (this.state.activePage > 0) ? 'f-opac' : 'h-opac'  
+          <div onClick={this.workClick} className={
+            (this.state.activePage === 0) ? 'backToWork noClass' :
+            (this.state.activePage > 0 && !this.state.content) ? 'backToWork' :
+            'backToWork noClass'
+          }></div>
+
+          <div  className={(this.state.activePage === 0) ? 'f-opac' :
+          (this.state.activePage > 0 && this.state.content) ? 'f-opac' : 'h-opac'  
         }>
           <Switch>
             <Route path="/Work/Public" component={WorkContent}/>
