@@ -179,9 +179,6 @@ a:link, a:visited {
 }
 
 @keyframes cTitleTransA{
-  /* from {opacity: 1.0; width: 25vw;}
-  to {opacity: 0.0; width: 0.01vw} */
-
   25% {opacity: 0.0;}
   100% {
     width: 0.01vw;
@@ -204,8 +201,8 @@ a:link, a:visited {
 }
 
 @keyframes cTitleTransB{
-  from {opacity: 0.0; width: 0.01vw}
-  to {opacity: 1.0; width: 25vw;}
+  65% {opacity: 0.0;}
+  100% {opacity: 1.0; width: 25vw;}
 }
 
 .div-wrap {
@@ -379,17 +376,6 @@ a:link, a:visited {
 }
 
 @keyframes transOutB {
-  /* from  {
-    font-size: 0.0em;
-    opacity: 0.0;
-    width: 0.01vw;
-  }
-  to  {
-    font-size: 0.8em;
-    opacity: 1.0;
-    width: 12vw;
-  } */
-  
   60% {
     opacity: 0.0
   }
@@ -413,15 +399,16 @@ a:link, a:visited {
 .link-text{
   text-align: center;
   width: 12vw;
-  
 }
 
-/* @media only screen and (max-width: 1380px) {
-  .div-wrap {
-    width: 15%;
-  }
+.backToWork {
+  position: absolute;
+  width: 100vw;
+  height: 100%;
+  top: 0em;
+  z-index: 10;
 }
-*/
+
 .work-in {
   position: absolute;
   font-family: 'Montserrat', sans-serif;
@@ -439,7 +426,6 @@ a:link, a:visited {
 .content {
   position: absolute;
   display: block;
-  /* bottom: 0; */
   border-radius: 25px 25px 0px 0px;
   background-image: linear-gradient(to left,#F2FFF7, #FFFFF2 );
   height: 100%;
@@ -448,9 +434,18 @@ a:link, a:visited {
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
   z-index: 1;
-  transition: 1s;
 }
 
+.content-transition-A {
+  animation-name: contentTransitionA;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes contentTransitionA {
+  0% {top: 6em;}
+  100%{top: 0};
+}
 
 ::-webkit-scrollbar {
   display: none;
@@ -458,7 +453,6 @@ a:link, a:visited {
 
 .c-selected {
   position: absolute;
-  /* display: block; */
   bottom: 0em;
   top: 0;
   border-radius: 25px 25px 0px 0px;
@@ -468,7 +462,18 @@ a:link, a:visited {
   z-index: 1;
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
-  transition: 1s;
+}
+
+
+.content-transition-B {
+  animation-name: contentTransitionB;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes contentTransitionB {
+  0% {top: 0;}
+  100%{top: 6em};
 }
 
 .menu-button {
@@ -488,14 +493,11 @@ a:link, a:visited {
 .work-content {
   display: block;
   margin: 0% 10%;
-  /* width: 80%; */
   height: 75vh;
-  border: black 2px solid;
   
 }
 
 .work-nav {
-  /* width: 80%; */
   margin: 0% 10%;
   padding-top: 10%;
   height: 10%;
@@ -509,7 +511,7 @@ a:link, a:visited {
   font-family: 'Karla', sans-serif;
   text-align: center;
   color: #707070;
-  opacity: 0.14;
+  opacity: 0.35;
   font-size: 1.5em;
   letter-spacing: 0.2em;
   transition: font-size 0.3s, font-weight 0.3s, opacity 0.3s ;
