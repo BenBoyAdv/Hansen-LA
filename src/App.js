@@ -10,7 +10,7 @@ import './App.css';
 
 class App extends React.Component 
 {
-  state={pageTransition: 0, activePage: null, content: false}
+  state={pageTransition: 0, activePage: 0, content: false}
 
   pageClick = (index) => {
     this.setState({activePage: index, pageTransition: 1, content: true})
