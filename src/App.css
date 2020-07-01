@@ -23,8 +23,8 @@ a:link, a:visited {
 .App {
   position: absolute;
   display: block;
-  height: 1080px;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
   background-image: linear-gradient(#B5E8BB, #FFFFFF 19%, #FFFFFF);
 }
 
@@ -305,6 +305,7 @@ a:link, a:visited {
   width: 12vw;
   opacity: 1.0;
   padding-bottom: 1em;
+  padding-top: 0em;
   font-family: 'Montserrat', sans-serif;
   font-size: 0.8em;
   animation-name: linkTransInA;
@@ -315,9 +316,11 @@ a:link, a:visited {
 @keyframes linkTransInA {
   from  {font-size: 0.8em; padding-bottom: 1em;}
   to  {
-    font-size: 2em;
-    font-weight: bold;
+    font-size: 3em;
+    /* font-weight: bold; */
     padding-bottom: 0em;
+    padding-top: 1em;
+    opacity: 0.6;
   }
 }
 
@@ -327,7 +330,7 @@ a:link, a:visited {
   padding-bottom: 0em;
   font-family: 'Montserrat', sans-serif;
   font-size: 2em;
-  font-weight: bold;
+  /* font-weight: bold; */
   animation-name: linkTransInB;
   animation-duration: 1s;
   animation-fill-mode: forwards;
@@ -336,7 +339,7 @@ a:link, a:visited {
 @keyframes linkTransInB {
   from  {
     font-size: 2em;
-    font-weight: bold;
+    /* font-weight: bold; */
     padding-bottom: 0em;
   }
   to  {
@@ -401,6 +404,33 @@ a:link, a:visited {
   width: 12vw;
 }
 
+.home-screen {
+  color: #FFFFFF;
+  font-family: 'Karla', sans-serif;
+  font-weight: 400;
+  font-size: 2.5em;
+  padding-top: 6.5em;
+  letter-spacing: 1em;
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 25px 25px 0px 0px;
+  background-image: url(./Assets/Home_Screen_Splash.png);
+  background-position-y: center;
+  opacity: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  animation-name: homeIn;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  /* filter: blur(5px); */
+}
+
+@keyframes homeIn{
+  100% {opacity: 1.0;}
+}
+
 .backToWork {
   position: absolute;
   width: 100vw;
@@ -429,7 +459,7 @@ a:link, a:visited {
   border-radius: 25px 25px 0px 0px;
   background-image: linear-gradient(to left,#F2FFF7, #FFFFF2 );
   height: 100%;
-  width: 100vw;
+  width: 100%;
   top: 6em;
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
@@ -520,7 +550,7 @@ a:link, a:visited {
 .work-link:hover {
   font-size: 1.6em;
   font-weight: bold;
-  opacity: 0.5;
+  opacity: 0.8;
 }
 
 
@@ -661,9 +691,9 @@ a:link, a:visited {
 
 .slideControls
 {
-  height: 1em;
-  width: 1em;
-  background-image: url(./Assets/Icons/Close\ -\ X.png);
+  height: 6em;
+  width: 6em;
+  background-image: url(./Assets/Icons/photo_scroll_arrow@2x.png);
   background-size: contain;
   background-repeat: no-repeat;
   animation-name: closeFade;
@@ -694,4 +724,36 @@ a:link, a:visited {
 
 .photo3 {
   background-image: url(https://www.kindpng.com/picc/m/183-1838292_8-bit-metroid-sprite-hd-png-download.png);
+}
+
+
+.about-container{
+  position: absolute;
+  top: 25%;
+  width: 75%;
+}
+
+.about-photo {
+  display: inline-block;
+  width: 25em;
+  margin-left: 13%;
+}
+
+.about-photo img{
+  display: inline-block;
+  width: 20em;
+}
+
+.about-text {
+  font-family: 'Montserrat', sans-serif;
+  position: absolute;
+  display: inline-block;
+  width: 70%;
+  font-size: 1.2em;
+  letter-spacing: 0.2em;
+  line-height: 2.1em;
+  /* height: 15em; */
+  top: 0;
+  bottom: 0;
+  opacity: 0.9;
 }
