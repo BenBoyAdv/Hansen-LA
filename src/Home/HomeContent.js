@@ -1,12 +1,11 @@
 import React from 'react';
 
-class HomeContent extends React.Component {
-    render()
-    {
+function HomeContent ()  {
+    
         return <div className="home-screen">
             our spaces our lives
         </div>
-    }
+
 };
 
 
