@@ -5,14 +5,26 @@ import AboutContent from './About/AboutContent';
 import ContactContent from './Contact/ContactContent';
 import HomeContent from './Home/HomeContent';
 import NavLink from './Nav';
+// import throttle from 'lodash.throttle';
 import './App.css';
 // import Project from './Work/Project';
 
 class App extends React.Component 
 {
-  state={pageTransition: 0, activePage: 0, content: false}
+  state={pageTransition: 0, activePage: 0, content: false, mobileMenu: null, inMobile:null}
+
+  
+  getSize = () => {
+    
+    (window.innerWidth < 710) ? this.setState({inMobile: true}) :
+    this.setState({inMobile:false})
+    console.log(this.state.inMobile)
+  }
+  
+  
 
   pageClick = (index) => {
+    this.state.inMobile ? this.setState({activePage: index}) :
     this.setState({activePage: index, pageTransition: 1, content: true})
     // setTimeout(()=>this.setState({activePage: index, pageTransition: 0}),1000)
   }
@@ -28,9 +40,19 @@ class App extends React.Component
     this.setState({activePage: index, pageTransition: 2, content:false})
     setTimeout(()=>this.setState({activePage: index, pageTransition: 0, content:false}),1000)
   }
+  
+
+  mobileMenuClick = () => {
+    let isMenu = this.state.mobileMenu;
+    (isMenu === 0) ? (this.setState({mobileMenu: 1})) :
+    (this.setState({mobileMenu: 0}))
+    console.log(this.width)
+  }
 
   isActive = (index) => {
     return (
+    (this.state.inMobile && this.state.mobileMenu === 1 && index < 3)? 'h-full nav-link-2 flex-row':  
+    (this.state.inMobile && this.state.mobileMenu === 1)? 'h-full nav-link nav-link-m flex-row':  
     (this.state.activePage !== 0 && this.state.activePage === index && this.state.pageTransition === 1) ?
     'h-full link-transition-in-A flex-row a-end' :
     (this.state.activePage !== 0 && this.state.activePage === index && this.state.pageTransition === 2) ? 
@@ -56,11 +78,12 @@ class App extends React.Component
   ]
   render()
   {
+    window.addEventListener("resize", this.getSize)
     return (
-
+      
       <div className="App">
         <Router>
-        <div className="nav-bar flex-row a-end">
+        <div className="nav-bar">
 
           <div className="h-full flex-row a-end icon-wrap">
             <div className={(this.state.activePage > 0 && this.state.content)? "icon icon2":"icon"}></div>
@@ -83,9 +106,9 @@ class App extends React.Component
           </div>
 
           <div className={
-            (this.state.activePage > 0 && this.state.pageTransition === 1) ? "div-wrap-transition-A flex-row a-center j-center":
-            (this.state.activePage > 0 && this.state.pageTransition === 2) ? "div-wrap-transition-B flex-row a-center j-center":
-            "div-wrap flex-row a-center j-center"
+            (this.state.activePage > 0 && this.state.pageTransition === 1) ? "div-wrap-transition-A":
+            (this.state.activePage > 0 && this.state.pageTransition === 2) ? "div-wrap-transition-B":
+            "div-wrap"
             }
           >
             <div className={
@@ -96,7 +119,9 @@ class App extends React.Component
             ></div>
           </div>
 
-          <div className="flex-row h-full a-end">  
+          <div onClick={this.mobileMenuClick} className="mobile-menu"></div>
+
+          <div className="nav-selector">  
             {this.navLinks.map((navItem,i)=>{
               return (<NavLink
                 name={navItem.name}
@@ -117,6 +142,7 @@ class App extends React.Component
 
         <div className=
           {
+            (this.state.mobileMenu) ? 'content mobile-content-down' :
             (this.state.activePage === 0) ? 'content' :
             (this.state.activePage > 0 && this.state.pageTransition === 1) ? "content content-transition-A":
             (this.state.activePage > 0 && this.state.pageTransition === 2) ? "c-selected content-transition-B":
