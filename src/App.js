@@ -4,6 +4,9 @@ import WorkContent from './Work/WorkContent';
 import AboutContent from './About/AboutContent';
 import ContactContent from './Contact/ContactContent';
 import HomeContent from './Home/HomeContent';
+import EmailIcon from './Assets/Icons/email-icon-w.png';
+import LinkedInIcon from './Assets/Icons/LI-In-Bug-w.png';
+import FBIcon from './Assets/Icons/fb-icon-w.png';
 import NavLink from './Nav';
 // import throttle from 'lodash.throttle';
 import './App.css';
@@ -64,7 +67,7 @@ class App extends React.Component
   isActive = (index) => {
     return (
     (this.state.inMobile && this.state.mobileMenu === 1 && index < 3)? 'h-full nav-link-2 flex-row':  
-    (this.state.inMobile && this.state.mobileMenu === 1)? 'h-full nav-link nav-link-m flex-row':  
+    (this.state.inMobile && this.state.mobileMenu === 1)? 'h-full nav-link-2 nav-link-m flex-row':  
     (this.state.activePage !== 0 && this.state.activePage === index && this.state.pageTransition === 1) ?
     'h-full link-transition-in-A flex-row a-end' :
     (this.state.activePage !== 0 && this.state.activePage === index && this.state.pageTransition === 2) ? 
@@ -173,7 +176,10 @@ class App extends React.Component
 
           <div  className={(this.state.activePage === 0 || this.state.inMobile) ? 'f-opac' :
           (this.state.activePage > 0 && this.state.content) ? 'f-opac' : 'h-opac'  
-        }>
+          }>
+
+   
+
           <Switch>
             <Route path="/Work/Public" component={WorkContent}/>
             <Route path="/About" component={AboutContent}/>
@@ -182,6 +188,17 @@ class App extends React.Component
           </Switch>
           </div>
         </div>
+        <div className="footer">
+            <a href="">
+              <img src={EmailIcon}></img>
+            </a>
+            <a href="">
+              <img src={LinkedInIcon}></img>
+            </a>
+            <a href="">
+              <img src={FBIcon}></img>
+            </a>
+          </div>
         </Router>
       </div>
     );
