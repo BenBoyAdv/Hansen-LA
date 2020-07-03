@@ -23,8 +23,9 @@ a:link, a:visited {
 .App {
   position: absolute;
   display: block;
-  height: 100%;
+  height: 100vh;
   width: 100%;
+  overflow: hidden;
   background-image: linear-gradient(#B5E8BB, #FFFFFF 19%, #FFFFFF);
 }
 
@@ -475,6 +476,7 @@ a:link, a:visited {
   height: 100%;
   width: 100%;
   top: 6em;
+  overflow: scroll;
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
   z-index: 1;
@@ -569,6 +571,9 @@ a:link, a:visited {
 
 
 .project-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   width: 100%;
   height: 100%;
 }
@@ -633,8 +638,10 @@ a:link, a:visited {
 .close-button
 {
   height: 5%;
+  float: right;
   width: 5%;
-  background-image: url(./Assets/Icons/Close\ -\ X.png);
+  margin-top: 2%;
+  background-image: url(./Assets/Icons/Close\ -\ X-hover.png);
   background-size: contain;
   background-repeat: no-repeat;
   animation-name: closeFade;
@@ -653,7 +660,14 @@ a:link, a:visited {
 .close-button:hover 
 {
   opacity: 1.0;
-  background-image: url(./Assets/Icons/Close\ -\ X-hover.png);
+  background-image: url(./Assets/Icons/Close\ -\ X.png);
+}
+
+.control-box {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  top: 75%;
 }
 
 .select-project{
@@ -706,8 +720,7 @@ a:link, a:visited {
 .slideControls
 {
   height: 6em;
-  width: 6em;
-  background-image: url(./Assets/Icons/photo_scroll_arrow@2x.png);
+  width: 5em;
   background-size: contain;
   background-repeat: no-repeat;
   animation-name: closeFade;
@@ -716,6 +729,17 @@ a:link, a:visited {
   animation-fill-mode: forwards;
   opacity: 0.0;
 }
+
+.left-slide {
+  background-image: url(./Assets/Icons/photo_scroll_arrow@2x.png);
+  
+}
+.right-slide {
+  background-image: url(./Assets/Icons/photo_scroll_arrow@2x.png);
+  transform: scaleX(-1);
+}
+
+
 
 .noClass {
   height: 0.1%;
@@ -762,7 +786,7 @@ a:link, a:visited {
   font-family: 'Montserrat', sans-serif;
   position: absolute;
   display: inline-block;
-  width: 70%;
+  width: 60%;
   font-size: 1.2em;
   letter-spacing: 0.2em;
   line-height: 2.1em;
@@ -770,6 +794,7 @@ a:link, a:visited {
   top: 0;
   bottom: 0;
   opacity: 0.9;
+  overflow: scroll;
 }
 
 .mobile-menu {
@@ -778,6 +803,10 @@ a:link, a:visited {
   height: 100%;
 }
 
+.mobile-about-box{
+  height: 0%;
+  width: 0%;
+}
 
 @media only screen and (max-width: 710px) {
   .nav-bar {
@@ -867,10 +896,88 @@ a:link, a:visited {
     top: 6em;
     transition: top 0.5s;
     border-radius: 0px 0px 0px 0px;
+    overflow: scroll;
   }  
   
   .mobile-content-down {
     top: 11.9em;
+  }
+
+  .work-nav {
+    margin: 0% 10%;
+    padding-top: 10%;
+    height: 10%;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  .work-link:link {
+    text-decoration: none;
+    height: 100%;
+    width: 20%;
+    font-family: 'Karla', sans-serif;
+    text-align: center;
+    color: #707070;
+    opacity: 0.5;
+    font-size: 1.5rem;
+    letter-spacing: 0em;
+    transition: font-size 0.3s, font-weight 0.3s, opacity 0.3s ;
+  }
+
+  .project-box {
+    opacity: 1.0;
+  }
+
+  .project-container {
+    width: 100%;
+    height: 90%;
+    justify-content: flex-start;
+    padding-top: 1em;
+  }
+
+  .about-container {
+    position: absolute;
+    /* height: 100%; */
+    top: 0%;
+    width: 100%;
+    overflow: scroll;
+  }
+  
+  .about-photo {
+    display: block;
+    width: 100%;
+    margin-left: 0%;
+  }
+  
+  .about-photo img{
+    display: block;
+    width: 100%;
+  }
+  
+  .about-text {
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    position: absolute;
+    display: block;
+    height: 85%;
+    width: 100%;
+    text-align: center;
+    font-size: 1.2em;
+    letter-spacing: 0.2em;
+    line-height: 2.1em;
+    /* height: 15em; */
+    top: 2em;;
+    bottom: 0;
+    opacity: 1;
+    overflow: scroll;
+  }
+  .mobile-about-box{
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: 0.5;
   }
   
 }
