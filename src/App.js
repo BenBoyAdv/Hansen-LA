@@ -16,11 +16,21 @@ class App extends React.Component
   
   getSize = () => {
     
-    (window.innerWidth < 710) ? this.setState({inMobile: true}) :
-    this.setState({inMobile:false})
-    console.log(this.state.inMobile)
+ 
+    (window.innerWidth < 710) ? this.setState({inMobile: true, content:false, pageTransition:0}) :
+    this.setState({inMobile:false, mobileMenu: null})
+    // console.log(this.state.inMobile)
+    
   }
   
+  initSize = () => {
+    if (this.state.inMobile === null) {
+      setTimeout(()=>(
+        this.getSize()
+      ),500)
+    }
+    // console.log(this.state.inMobile)
+  }
   
 
   pageClick = (index) => {
@@ -31,8 +41,10 @@ class App extends React.Component
   
   workClick = () => {
     const index = this.state.activePage
+    if (!this.state.inMobile){
     this.setState({activePage: index, pageTransition: 1, content: true})
     // setTimeout(()=>this.setState({activePage: index, pageTransition: 0, content:true}),1000)
+    }
   }
 
   menuClick = () => {
@@ -44,9 +56,9 @@ class App extends React.Component
 
   mobileMenuClick = () => {
     let isMenu = this.state.mobileMenu;
-    (isMenu === 0) ? (this.setState({mobileMenu: 1})) :
+    (isMenu === null || isMenu === 0) ? (this.setState({mobileMenu: 1})) :
     (this.setState({mobileMenu: 0}))
-    console.log(this.width)
+    console.log(this.state.inMobile)
   }
 
   isActive = (index) => {
@@ -79,6 +91,7 @@ class App extends React.Component
   render()
   {
     window.addEventListener("resize", this.getSize)
+    this.initSize()
     return (
       
       <div className="App">
@@ -125,6 +138,7 @@ class App extends React.Component
             {this.navLinks.map((navItem,i)=>{
               return (<NavLink
                 name={navItem.name}
+                key={navItem.name}
                 index={i}
                 isActive={this.isActive}
                 pageClick={this.pageClick}
@@ -152,12 +166,12 @@ class App extends React.Component
           }
         >
           <div onClick={this.workClick} className={
-            (this.state.activePage === 0) ? 'backToWork noClass' :
+            (this.state.activePage === 0 || this.state.inMobile) ? 'backToWork noClass' :
             (this.state.activePage > 0 && !this.state.content) ? 'backToWork' :
             'backToWork noClass'
           }></div>
 
-          <div  className={(this.state.activePage === 0) ? 'f-opac' :
+          <div  className={(this.state.activePage === 0 || this.state.inMobile) ? 'f-opac' :
           (this.state.activePage > 0 && this.state.content) ? 'f-opac' : 'h-opac'  
         }>
           <Switch>
