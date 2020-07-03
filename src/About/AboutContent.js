@@ -5,6 +5,7 @@ class AboutContent extends React.Component {
     render() {
         return (
             <div className="about-container">
+                <div className="mobile-about-box"></div>
                 <div className="about-photo">
                     <img src={Photo} alt="Greg"/>
                 </div>
