@@ -14,7 +14,7 @@ class WorkContent extends React.Component {
       <div className="flex-col j-center a-center work-content">
 
         <Switch className="a-ht">
-          <div className="project-container flex-col j-center">
+          <div className="project-container">
           <Route path="/Work/Public" component={PublicWork}/>
           <Route path="/Work/Education" component={EducationWork}/>
           <Route path="/Work/Medical" component={MedicalWork}/>
