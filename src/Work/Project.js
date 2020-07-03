@@ -17,13 +17,13 @@ class Project extends React.Component
 
   nextSlide = () => {
     let slideIndex = this.state.activeSlide;
-    (slideIndex < 2) ? slideIndex++ : (slideIndex = 0)
+    (slideIndex < this.props.projectPhotos.length -1 ) ? slideIndex++ : (slideIndex = 0)
     this.setState({activeSlide: slideIndex})
   }
 
   prevSlide = () => {
     let slideIndex = this.state.activeSlide;
-    (slideIndex > 0) ? slideIndex-- : (slideIndex = 2)
+    (slideIndex > 0) ? slideIndex-- : (slideIndex = this.props.projectPhotos.length -1 )
     this.setState({activeSlide: slideIndex})
   }
   
