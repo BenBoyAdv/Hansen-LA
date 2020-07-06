@@ -112,17 +112,17 @@ a:link, a:visited {
 
 
 .icon {
-  background-image: url(./Assets/Icons/Icon.png);
+  background-image: url(./Assets/Icons/Icon-2.png);
   background-size: contain;
-  width: 4em;
-  height: 3em;
+  width: 5em;
+  height: 5em;
   z-index: 3;
   background-repeat: no-repeat;
   transition: background-image 1s;
 }
 
 .icon2 {
-  background-image: url(./Assets/Icons/Group\ 1.png);
+  background-image: url(./Assets/Icons/Icon-2.png);
   transition: background-image 1s;
 }
 
