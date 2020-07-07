@@ -117,7 +117,7 @@ class App extends React.Component
               "company-title"
               }
             >
-              Hansen LA
+              HANSEN LA
             </div>
           </div>
 
@@ -169,16 +169,16 @@ class App extends React.Component
           }
         >
           <div onClick={this.workClick} className={
-            (this.state.activePage === 0 || this.state.inMobile) ? 'backToWork noClass' :
+            (this.state.activePage === 0 || this.state.inMobile) ? 'backToWork noClass-content' :
             (this.state.activePage > 0 && !this.state.content) ? 'backToWork' :
-            'backToWork noClass'
-          }></div>
+            'backToWork noClass-content'
+          }>click to view</div>
 
           <div  className={(this.state.activePage === 0 || this.state.inMobile) ? 'f-opac' :
           (this.state.activePage > 0 && this.state.content) ? 'f-opac' : 'h-opac'  
           }>
-
-   
+            
+          
 
           <Switch>
             <Route path="/Work/Public" component={WorkContent}/>
