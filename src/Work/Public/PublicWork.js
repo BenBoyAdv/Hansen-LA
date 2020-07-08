@@ -2,9 +2,13 @@ import React from 'react';
 import '../../App.css';
 import '../ProjectPhotos.css';
 import ProjectContainer from '../ProjectContainer';
+// import other work libraries
 
+//change to function
 class PublicWork extends React.Component 
 {
+    // declare inMobile variable from this.props.inMobile
+
     publicProjects = 
     [
         {name: "project-1", projectPhotos:[
@@ -21,8 +25,10 @@ class PublicWork extends React.Component
         ]}
         
     ]
+    // function returning either publicProjects alone or all work project libraries
     render()
     {
+        //pass results of function as projects prop
         return <ProjectContainer projects={this.publicProjects}/>
     }
 }

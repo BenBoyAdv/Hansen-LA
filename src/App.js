@@ -181,6 +181,15 @@ class App extends React.Component
           
 
           <Switch>
+
+            {/* 
+              change route component to render:
+              render={(props) => (
+              <Dashboard {...props} isAuthed={true} />
+
+              pass inMobile states value
+            */}
+            
             <Route path="/Work/Public" component={WorkContent}/>
             <Route path="/About" component={AboutContent}/>
             <Route path="/Contact" component={ContactContent}/>

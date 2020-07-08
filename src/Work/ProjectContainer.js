@@ -2,16 +2,16 @@ import React from 'react';
 import Project from './Project';
 import '../App.css';
 
+
 class ProjectContainer extends React.Component {
+
+    //declare inMobile variable from this.props.inMobile
 
     state = {activeIndex:null, anyActive:false, transition:false}
 
     closeBox = (index) => {
         
         this.setState({activeIndex:index, anyActive:true, transition:true})
-        // const transition = () =>{
-        //    this.setState({activeIndex:null, anyActive:false, transition:false})
-        // }
         setTimeout(()=>{
             this.setState({activeIndex:null, anyActive:false, transition:false})
         },1000)

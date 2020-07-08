@@ -6,7 +6,12 @@ import PublicWork from './Public/PublicWork';
 import EducationWork from './Education/Education';
 import MedicalWork from './Medical/Medical';
 import CommercialWork from './Commercial/Commercial';
+
+// change to function
 class WorkContent extends React.Component {
+
+  // define inMobile
+
   render() {
     return (
       <Router>
@@ -15,6 +20,14 @@ class WorkContent extends React.Component {
 
         <Switch className="a-ht">
           <div className="project-container">
+
+            {/* change to render 
+            render={(props) => (
+            <PublicWork {...props} isAuthed={true} />
+
+            pass inMobile props
+            */}
+
           <Route path="/Work/Public" component={PublicWork}/>
           <Route path="/Work/Education" component={EducationWork}/>
           <Route path="/Work/Medical" component={MedicalWork}/>
