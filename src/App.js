@@ -8,13 +8,11 @@ import EmailIcon from './Assets/Icons/email-icon-w.png';
 import LinkedInIcon from './Assets/Icons/LI-In-Bug-w.png';
 import FBIcon from './Assets/Icons/fb-icon-w.png';
 import NavLink from './Nav';
-// import throttle from 'lodash.throttle';
 import './App.css';
-// import Project from './Work/Project';
 
 class App extends React.Component 
 {
-  state={pageTransition: 0, activePage: 0, content: false, mobileMenu: null, inMobile:null}
+  state={pageTransition: 0, activePage: 0, content: false, mobileMenu: null, inMobile:null, workActive:null}
 
   
   getSize = () => {
@@ -82,6 +80,10 @@ class App extends React.Component
     // 'h-full noClass flex-row a-end' : 
     'h-full nav-link flex-row a-end' 
     )
+  }
+
+  workActivate = (index) => {
+    setTimeout(()=> (this.setState({workActive: index})),2000)
   }
 
   
@@ -189,8 +191,11 @@ class App extends React.Component
 
               pass inMobile states value
             */}
-            
-            <Route path="/Work/Public" component={WorkContent}/>
+
+            <Route 
+              path="/Work/Public" 
+              render={() => <WorkContent workIndex={this.state.workActive} workActivate={this.workActivate}  inMobile={this.state.inMobile}/>}
+            />
             <Route path="/About" component={AboutContent}/>
             <Route path="/Contact" component={ContactContent}/>
             <Route path="/" component={HomeContent}/>

@@ -2,22 +2,30 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import '../App.css';
 
-function WorkNav () {
+
+const workNavLinks = [
+  {name: 'Public'},
+  {name: 'Education'},
+  {name: 'Medical'},
+  {name: 'Commercial'}
+]
+
+function WorkNav (props) {
+  const workActivate = (index) => props.workActivate(index)
+  // const workIndex = props.workIndex
+  const workNavMap = workNavLinks.map((proj,i)=>{
+    return (
+      <div onClick={workActivate(i)} className="work-link flex-row a-center j-center">
+        <div className="a-ht">
+            {proj.name}
+        </div>
+      </div>
+    )
+  })
     return (
       <div className="flex-row a-center work-nav">
-          <Link to="/Work/Public" className="work-link flex-row a-center j-center">
-            <div className="a-ht">Public</div>
-          </Link>
-          <Link to="/Work/Education" className="work-link flex-row a-center j-center">
-            <div className="a-ht">Education</div>
-          </Link>
-          <Link to="/Work/Medical" className="work-link flex-row a-center j-center">
-            <div className="a-ht">Medical</div>
-          </Link>
-          <Link to="/Work/Commercial" className="work-link flex-row a-center j-center">
-            <div className="a-ht">Commercial</div>
-          </Link>
-        </div>
+          {workNavMap}
+      </div>
         )
     }
 

@@ -2,35 +2,36 @@ import React from 'react';
 import '../../App.css';
 import '../ProjectPhotos.css';
 import ProjectContainer from '../ProjectContainer';
-// import other work libraries
+import projectLib from '../projects';
 
-//change to function
-class PublicWork extends React.Component 
+function PublicWork (props)
 {
-    // declare inMobile variable from this.props.inMobile
-
-    publicProjects = 
-    [
-        {name: "project-1", projectPhotos:[
-            'childrens-park-photo-1', 'childrens-park-photo-2','childrens-park-photo-3',
-            'childrens-park-photo-4', 'childrens-park-photo-5', 'childrens-park-photo-6', 'childrens-park-photo-7'
-        ]},
-        {name: "project-2", projectPhotos:[
-            'childrens-park-photo-4', 'childrens-park-photo-2','childrens-park-photo-5',
-            'childrens-park-photo-1', 'childrens-park-photo-3', 'childrens-park-photo-6', 'childrens-park-photo-7'
-        ]},
-        {name: "project-3", projectPhotos:[
-            'childrens-park-photo-7', 'childrens-park-photo-2','childrens-park-photo-5',
-            'childrens-park-photo-1', 'childrens-park-photo-3', 'childrens-park-photo-6', 'childrens-park-photo-4'
-        ]}
-        
-    ]
+    const inMobile = props.inMobile;
+    
     // function returning either publicProjects alone or all work project libraries
-    render()
-    {
-        //pass results of function as projects prop
-        return <ProjectContainer projects={this.publicProjects}/>
+
+    const projectReturn = () => {
+        let projectList = []
+        if (inMobile === true)
+            {
+                // for each property in projectLib map it's array pushing each objects to projectList
+                for(const property in projectLib)
+                    {
+                        property.map(proj => {
+                            projectList.push(proj)
+                        })
+                    }
+            }
+        else 
+            {projectList.push()}
+            return projectList;    
     }
+
+
+
+        //pass results of function as projects prop
+        return <ProjectContainer projects={projectReturn()}/>
+    
 }
 
 export default PublicWork;
