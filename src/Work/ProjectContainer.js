@@ -41,6 +41,7 @@ class ProjectContainer extends React.Component {
                         closeBox={this.closeBox}
                         settings={this.state}
                         projectPhotos={proj.projectPhotos}
+                        inMobile={this.props.inMobile}
                     />
                 )
             })
