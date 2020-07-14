@@ -17,13 +17,13 @@ function WorkContent(props) {
           <div className="project-container">
            
           <PublicWork workIndex={workIndex} inMobile={inMobile} />
-          
           {/* <Route path="/Work/Education" component={EducationWork}/> */}
           {/* <Route path="/Work/Medical" component={MedicalWork}/> */}
           {/* <Route path="/Work/Commercial" component={CommercialWork}/> */}
           </div>
         {/* </Switch> */}
       </div>
+          <div className="work-fade"></div>
       </Router>
     )
   
