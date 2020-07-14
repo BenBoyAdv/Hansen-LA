@@ -1,5 +1,6 @@
 import React from 'react';
 import '../App.css';
+import { noConflict } from 'lodash';
 
 
 class Project extends React.Component
@@ -53,7 +54,7 @@ class Project extends React.Component
       >
 
         <div id="project-activate-window"
-          onClick={this.handleClick}
+          onClick={!this.props.inMobile ? this.handleClick : ()=>console.log('click deactivated for mobile')}
           className={'select-project'}
         >
 
