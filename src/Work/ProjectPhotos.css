@@ -1,3 +1,25 @@
+.public-header {
+  background-image: url(../Assets/ProjectPhotos/Public/PublicHeader.svg);
+}
+.medical-header {
+  background-image: url(../Assets/ProjectPhotos/Public/MedicalHeader.svg);
+}
+.education-header {
+  background-image: url(../Assets/ProjectPhotos/Public/EducationHeader.svg);
+}
+.commercial-header {
+  background-image: url(../Assets/ProjectPhotos/Public/CommercialHeader.svg);
+}
+.section-head {
+  background-position: center;
+  height: 0em;
+  opacity: 0;
+  display: none;
+}
+.section-head:hover{
+  height: 0em;
+  opacity: 0;
+}
 .childrens-park-photo-1 {
   background-image: url(../Assets/ProjectPhotos/Public/ChildrensPark/Childrens0016.jpg);
 }
@@ -18,4 +40,28 @@
 }
 .childrens-park-photo-7 {
   background-image: url(../Assets/ProjectPhotos/Public/ChildrensPark/Childrens0058.jpg);
+}
+
+@media only screen and (max-width: 900px) {
+  .section-head {
+    display: block;
+    height: 0em;
+    background-size: contain;
+    opacity: 0;
+  }
+  .section-head:hover{
+    opacity: 1;
+    height: 0;
+  }
+}
+@media only screen and (max-width: 710px) {
+  .section-head {
+    height: 5em;
+    background-size: contain;
+    opacity: 1;
+  }
+  .section-head:hover{
+    opacity: 1;
+    height: 5em;
+  }
 }
