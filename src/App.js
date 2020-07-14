@@ -8,26 +8,36 @@ import EmailIcon from './Assets/Icons/email-icon-w.png';
 import LinkedInIcon from './Assets/Icons/LI-In-Bug-w.png';
 import FBIcon from './Assets/Icons/fb-icon-w.png';
 import NavLink from './Nav';
+import _ from 'lodash';
 import './App.css';
 
 class App extends React.Component 
 {
-  state={pageTransition: 0, activePage: 0, content: false, mobileMenu: null, inMobile:null, workActive:null}
+  state={pageTransition: 0, activePage: 0, content: false, mobileMenu: null, inMobile:null, workActive:0}
 
   
-  getSize = () => {
-    
- 
-    (window.innerWidth < 710) ? this.setState({inMobile: true, content:false, pageTransition:0}) :
-    this.setState({inMobile:false, mobileMenu: null})
-    // console.log(this.state.inMobile)
+  mobileBreak = () => {
+    if (this.state.inMobile === false && window.innerWidth < 710) 
+    { 
+      this.setState({inMobile: true, content:false, pageTransition:0})
+    }
+    else if (this.state.inMobile === true && window.innerWidth > 710) 
+    {
+      this.setState({inMobile:false, mobileMenu: null})
+    }
+    else {console.log(this.state.inMobile)}
     
   }
+  getSize = _.throttle(function(){
+    window.addEventListener("resize", this.mobileBreak)
+
+  }, 2000)
   
   initSize = () => {
     if (this.state.inMobile === null) {
       setTimeout(()=>(
-        this.getSize()
+        window.innerWidth < 710 ? this.setState({inMobile: true}) :
+        this.setState({inMobile: false})
       ),500)
     }
     // console.log(this.state.inMobile)
@@ -70,20 +80,17 @@ class App extends React.Component
     'h-full link-transition-in-A flex-row a-end' :
     (this.state.activePage !== 0 && this.state.activePage === index && this.state.pageTransition === 2) ? 
     'flex-row a-end link-transition-in-B' :
-    // (this.state.activePage === index && this.state.pageTransition === 0) ?
-    // 'h-full page-title flex-row a-end' :
     (this.state.activePage > 0 && this.state.activePage !== index && this.state.pageTransition === 1)?
     'h-full link-transition-out-A flex-row a-end' :
     (this.state.activePage > 0 && this.state.activePage !== index && this.state.pageTransition === 2)?
     'h-full link-transition-out-B flex-row a-end' : 
-    // (this.state.activePage > 0 && this.state.activePage !== index && this.state.pageTransition === 0)?
-    // 'h-full noClass flex-row a-end' : 
     'h-full nav-link flex-row a-end' 
     )
   }
 
   workActivate = (index) => {
-    setTimeout(()=> (this.setState({workActive: index})),2000)
+    this.setState({workActive: index})
+    setTimeout(()=> (console.log(this.state.workActive)),300)
   }
 
   
@@ -95,8 +102,9 @@ class App extends React.Component
   ]
   render()
   {
-    window.addEventListener("resize", this.getSize)
-    this.initSize()
+    
+    window.addEventListener("resize", this.mobileBreak)
+    this.initSize();
     return (
       
       <div className="App">

@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+// import {Link} from 'react-router-dom';
 import '../App.css';
 
 
@@ -11,11 +11,10 @@ const workNavLinks = [
 ]
 
 function WorkNav (props) {
-  const workActivate = (index) => props.workActivate(index)
-  // const workIndex = props.workIndex
   const workNavMap = workNavLinks.map((proj,i)=>{
+    const workActivate = () => props.workActivate(i)
     return (
-      <div onClick={workActivate(i)} className="work-link flex-row a-center j-center">
+      <div onClick={workActivate} className="work-link flex-row a-center j-center">
         <div className="a-ht">
             {proj.name}
         </div>

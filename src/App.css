@@ -570,13 +570,13 @@ a:link, a:visited {
   justify-content: space-between;
 }
 
-.work-link:link {
+.work-link {
+  color: #5BC38D;
   text-decoration: none;
   height: 100%;
   width: 25%;
   font-family: 'Nunito', sans-serif;
   text-align: center;
-  color: #707070;
   opacity: 0.7;
   font-size: 1.5em;
   letter-spacing: 0.2em;
@@ -865,6 +865,22 @@ a:link, a:visited {
     justify-content: center;
     flex-direction: column;
   }
+  .project-box {
+    height: 10em;
+  }
+  .project-box:hover 
+  {
+    height: 10em;
+  opacity: 1.0;
+}
+
+.project-container {
+  width: 100%;
+  height: 98%;
+  justify-content: flex-start;
+  padding-top: 1%;
+  overflow: scroll;
+}
 }
 
 @media only screen and (max-width: 944px) {
@@ -1000,12 +1016,7 @@ a:link, a:visited {
     opacity: 1.0;
   }
 
-  .project-container {
-    width: 100%;
-    height: 90%;
-    justify-content: flex-start;
-    padding-top: 1%;
-  }
+  
 
   .about-container {
     position: absolute;

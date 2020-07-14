@@ -26,6 +26,20 @@ class Project extends React.Component
     (slideIndex > 0) ? slideIndex-- : (slideIndex = this.props.projectPhotos.length -1 )
     this.setState({activeSlide: slideIndex})
   }
+
+  projectDisplayType = () => {
+    if (this.props.inMobile === false) {
+      return (
+        (this.props.isActive && this.props.isTransition) ? `a-transition ${this.props.projectPhotos[this.state.activeSlide]}` : 
+        this.props.isActive ? `active ${this.props.projectPhotos[this.state.activeSlide]}` : 
+        (!this.props.isActive && this.props.isTransition) ? `b-transition ${this.props.projectPhotos[this.state.activeSlide]}` : 
+        this.props.anyActive ? `inactive ${this.props.projectPhotos[this.state.activeSlide]}` : `project-box ${this.props.projectPhotos[this.state.activeSlide]}`
+      )
+      
+    } else if (this.props.inMobile === true) {
+      return (`project-box ${this.props.projectPhotos[this.state.activeSlide]}`)
+    }
+  }
   
   render(){     
       
@@ -34,10 +48,7 @@ class Project extends React.Component
         id={this.props.name}
         className=
         {
-          (this.props.isActive && this.props.isTransition) ? `a-transition ${this.props.projectPhotos[this.state.activeSlide]}` : 
-          this.props.isActive ? `active ${this.props.projectPhotos[this.state.activeSlide]}` : 
-          (!this.props.isActive && this.props.isTransition) ? `b-transition ${this.props.projectPhotos[this.state.activeSlide]}` : 
-          this.props.anyActive ? `inactive ${this.props.projectPhotos[this.state.activeSlide]}` : `project-box ${this.props.projectPhotos[this.state.activeSlide]}`
+          this.projectDisplayType()
         }
       >
 

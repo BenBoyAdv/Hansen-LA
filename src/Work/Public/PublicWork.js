@@ -7,31 +7,34 @@ import projectLib from '../projects';
 function PublicWork (props)
 {
     const inMobile = props.inMobile;
+    const workIndex = props.workIndex;
     
-    // function returning either publicProjects alone or all work project libraries
-
-    const projectReturn = () => {
-        let projectList = []
-        if (inMobile === true)
-            {
-                // for each property in projectLib map it's array pushing each objects to projectList
-                for(const property in projectLib)
-                    {
-                        property.map(proj => {
-                            projectList.push(proj)
-                        })
-                    }
+    
+    const allProjects = [];
+    
+    const projectDisplaySwitch = () => {
+        
+        if (inMobile === true) {
+            allProjects.length = 0;
+            for (const key in projectLib) {
+                projectLib[key].forEach(element => {
+                    return allProjects.push(element)
+                });
             }
-        else 
-            {projectList.push()}
-            return projectList;    
+            console.log('mobile')
+        }
+        else if (inMobile === false) {
+            allProjects.length = 0;
+            const activeKey = Object.keys(projectLib)[workIndex]
+            projectLib[activeKey].forEach(element => {
+                return allProjects.push(element)
+            });
+            console.log('desktop')
+        }
+        
     }
-
-
-
-        //pass results of function as projects prop
-        return <ProjectContainer projects={projectReturn()}/>
+    projectDisplaySwitch();
+    return <ProjectContainer inMobile={inMobile} projects={allProjects}/>
     
 }
-
 export default PublicWork;
