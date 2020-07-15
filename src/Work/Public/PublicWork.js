@@ -14,8 +14,9 @@ function PublicWork (props)
     
     const projectDisplaySwitch = () => {
         
-        if (inMobile === true) {
+        if (inMobile === true || inMobile === false) {
             allProjects.length = 0;
+
             for (const key in projectLib) {
                 projectLib[key].forEach(element => {
                     return allProjects.push(element)
@@ -23,14 +24,18 @@ function PublicWork (props)
             }
             console.log('mobile')
         }
-        else if (inMobile === false) {
-            allProjects.length = 0;
-            const activeKey = Object.keys(projectLib)[workIndex]
-            projectLib[activeKey].forEach(element => {
-                return allProjects.push(element)
-            });
-            console.log('desktop')
-        }
+        // else if (inMobile === false) {
+        //     allProjects.length = 0;
+        //     for (const key in projectLib) {
+        //         // delete projectLib[key][0]
+                
+        //     }
+        //     const activeKey = Object.keys(projectLib)[workIndex]
+        //     projectLib[activeKey].forEach(element => {
+        //         return allProjects.push(element)
+        //     });
+        //     console.log('desktop')
+        // }
         
     }
     projectDisplaySwitch();

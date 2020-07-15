@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import '../App.css';
-import  WorkNav  from './WorkNav'
+// import  WorkNav  from './WorkNav'
 import PublicWork from './Public/PublicWork';
 
 function WorkContent(props) {
@@ -10,7 +10,7 @@ function WorkContent(props) {
     const inMobile = props.inMobile
     return (
       <Router>
-        <WorkNav workActivate={workActivate} workActive={workIndex}/>
+        {/* <WorkNav workActivate={workActivate} workActive={workIndex}/> */}
       <div className="flex-col j-center a-center work-content">
 
         {/* <Switch className="a-ht"> */}

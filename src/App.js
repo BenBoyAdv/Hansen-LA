@@ -45,6 +45,7 @@ class App extends React.Component
   
 
   pageClick = (index) => {
+    this.mobileMenuClick()
     this.state.inMobile ? this.setState({activePage: index}) :
     this.setState({activePage: index, pageTransition: 1, content: true})
     // setTimeout(()=>this.setState({activePage: index, pageTransition: 0}),1000)
