@@ -2,9 +2,13 @@ import React from 'react';
 
 function HomeContent ()  {
     
-        return <div className="home-screen">
-            our spaces our lives
+        return (
+        <div className="home-screen">
+            HANSEN 
+            LANDSCAPE 
+            ARCHITECTURE
         </div>
+        )
 
 };
 

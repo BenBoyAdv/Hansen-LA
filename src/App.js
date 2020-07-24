@@ -17,7 +17,7 @@ class App extends React.Component
 
   
   mobileBreak = () => {
-    if (this.state.inMobile === false && window.innerWidth < 710) 
+    if (this.state.inMobile === false && window.innerWidth < 710 || (window.innerWidth < 813 && window.innerHeight <= 420 )) 
     { 
       this.setState({inMobile: true, content:false, pageTransition:0})
     }
@@ -36,7 +36,7 @@ class App extends React.Component
   initSize = () => {
     if (this.state.inMobile === null) {
       setTimeout(()=>(
-        window.innerWidth < 710 ? this.setState({inMobile: true}) :
+        window.innerWidth < 710 || (window.innerWidth < 813 && window.innerHeight <= 420 ) ? this.setState({inMobile: true}) :
         this.setState({inMobile: false})
       ),500)
     }
@@ -45,7 +45,7 @@ class App extends React.Component
   
 
   pageClick = (index) => {
-    this.mobileMenuClick()
+    if (this.state.inMobile){this.mobileMenuClick()}
     this.state.inMobile ? this.setState({activePage: index}) :
     this.setState({activePage: index, pageTransition: 1, content: true})
     // setTimeout(()=>this.setState({activePage: index, pageTransition: 0}),1000)

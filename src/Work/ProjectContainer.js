@@ -7,20 +7,28 @@ class ProjectContainer extends React.Component {
 
     //declare inMobile variable from this.props.inMobile
 
-    state = {activeIndex:null, anyActive:false, transition:false}
+    state = {activeIndex:null, anyActive:false, transition:false, lightbox:false}
 
     closeBox = (index) => {
         
-        this.setState({activeIndex:index, anyActive:true, transition:true})
+        this.setState({activeIndex:index, anyActive:true, transition:true, lightbox:false})
         setTimeout(()=>{
-            this.setState({activeIndex:null, anyActive:false, transition:false})
+            this.setState({activeIndex:null, anyActive:false, transition:false, lightbox: false})
         },1000)
     }
 
     handleClick = index => {
         let currentState = this.state.anyActive
-        !currentState ? (this.setState({activeIndex:index, anyActive:true, transition:false})) : 
-        (console.log('click off'))
+        if(this.props.inMobile) {
+            !currentState ? (this.setState({activeIndex:index, anyActive:true, transition:false , lightbox: true})) : 
+            console.log('click off')
+        }
+        else
+        {
+            !currentState ? (this.setState({activeIndex:index, anyActive:true, transition:false})) : 
+            (console.log('click off'))
+
+        }
     }
 
     
@@ -29,6 +37,7 @@ class ProjectContainer extends React.Component {
         return (
             
             projects.map((proj, i)=>{
+                
                 return (
                     <Project
                         key={proj.name}
@@ -42,6 +51,9 @@ class ProjectContainer extends React.Component {
                         settings={this.state}
                         projectPhotos={proj.projectPhotos}
                         inMobile={this.props.inMobile}
+                        heading={proj.headingText}
+                        isHeading={proj.isHeading}
+                        isLightbox={this.state.lightbox}
                     />
                 )
             })

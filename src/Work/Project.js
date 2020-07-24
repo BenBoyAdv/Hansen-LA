@@ -1,10 +1,11 @@
 import React from 'react';
 import '../App.css';
-import { noConflict } from 'lodash';
-
+import '../Work/ProjectPhotos.css';
 
 class Project extends React.Component
+
 {
+
   state={activeSlide:0}
 
   handleClick = () => {
@@ -28,37 +29,16 @@ class Project extends React.Component
     this.setState({activeSlide: slideIndex})
   }
 
-  projectDisplayType = () => {
-    if (this.props.inMobile === false) {
-      return (
-        (this.props.isActive && this.props.isTransition) ? `a-transition ${this.props.projectPhotos[this.state.activeSlide]}` : 
-        this.props.isActive ? `active ${this.props.projectPhotos[this.state.activeSlide]}` : 
-        (!this.props.isActive && this.props.isTransition) ? `b-transition ${this.props.projectPhotos[this.state.activeSlide]}` : 
-        this.props.anyActive ? `inactive ${this.props.projectPhotos[this.state.activeSlide]}` : `project-box ${this.props.projectPhotos[this.state.activeSlide]}`
-      )
-      
-    } else if (this.props.inMobile === true) {
-      return (`project-box ${this.props.projectPhotos[this.state.activeSlide]}`)
-    }
-  }
   
-  render(){     
-      
-    return(
-      <div
-        id={this.props.name}
-        className=
-        {
-          this.projectDisplayType()
-        }
-      >
-
-        <div id="project-activate-window"
-          onClick={!this.props.inMobile ? this.handleClick : ()=>console.log('click deactivated for mobile')}
-          className={'select-project'}
+ 
+  ifProjectBox = () => {
+    if (!this.props.isHeading) {
+      return (
+        <div id=
+            "project-activate-window"
+          onClick={this.handleClick}
+          className={this.props.isHeading ? '' : 'select-project'}
         >
-
-          {/* {this.props.projectPhotos[this.state.activeSlide]} */}
 
           <div id="close-box"
             onClick={this.closeBox}
@@ -90,9 +70,48 @@ class Project extends React.Component
           </div>
 
         </div>
+      )
+    }
+  }
 
+  ifLightbox = () => {
+    if (!this.props.anyActive || this.props.inMobile && this.props.isActive) {
+      // this.ifProjectBox()
+      console.log('lightbox function')
+    } 
+  }
 
-
+  projectDisplayType = () => {
+    
+      return (
+        // (this.props.inMobile && this.props.isActive && this.props.isLightbox) ? `active ${this.props.projectPhotos[this.state.activeSlide]}` :
+        (this.props.inMobile && this.props.isActive === false && this.props.anyActive) ? 'noDisplay' : 
+        (this.props.isActive && this.props.isTransition) ? `a-transition ${this.props.projectPhotos[this.state.activeSlide]}` : 
+        this.props.isActive ? `active ${this.props.projectPhotos[this.state.activeSlide]}` : 
+        (!this.props.isActive && this.props.isTransition && this.props.isHeading) ? `section-head header-grow` : 
+        (!this.props.isActive && this.props.isTransition) ? `b-transition ${this.props.projectPhotos[this.state.activeSlide]}` : 
+        (this.props.anyActive && this.props.isHeading) ? `section-head header-shrink` : 
+        this.props.anyActive ? `inactive ${this.props.projectPhotos[this.state.activeSlide]}` : 
+        this.props.isHeading ? `section-head` :
+        `project-box ${this.props.projectPhotos[this.state.activeSlide]}`
+        )
+        
+      
+  }
+  
+  render(){     
+    return(
+      <div
+        id={this.props.name}
+        className=
+        {
+          this.projectDisplayType()
+        }
+      >
+        
+        {this.props.heading}
+        {this.ifProjectBox()}
+        
       </div>
     )
   }          

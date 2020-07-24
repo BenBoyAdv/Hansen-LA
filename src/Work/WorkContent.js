@@ -1,17 +1,19 @@
 import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import '../App.css';
-// import  WorkNav  from './WorkNav'
 import PublicWork from './Public/PublicWork';
 
 function WorkContent(props) {
     const workIndex = props.workIndex
     const workActivate = (index) => props.workActivate(index)
     const inMobile = props.inMobile
+    const contentAdjust = () => {
+      return inMobile ? 'work-content flex-col j-start' : 'flex-col j-center a-center work-content'
+    }
     return (
       <Router>
         {/* <WorkNav workActivate={workActivate} workActive={workIndex}/> */}
-      <div className="flex-col j-center a-center work-content">
+      <div className={contentAdjust()}>
 
         {/* <Switch className="a-ht"> */}
           <div className="project-container">
