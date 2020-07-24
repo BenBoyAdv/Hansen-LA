@@ -5,7 +5,6 @@ import PublicWork from './Public/PublicWork';
 
 function WorkContent(props) {
     const workIndex = props.workIndex
-    const workActivate = (index) => props.workActivate(index)
     const inMobile = props.inMobile
     const contentAdjust = () => {
       return inMobile ? 'work-content flex-col j-start' : 'flex-col j-center a-center work-content'

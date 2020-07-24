@@ -17,7 +17,7 @@ class App extends React.Component
 
   
   mobileBreak = () => {
-    if (this.state.inMobile === false && window.innerWidth < 710 || (window.innerWidth < 813 && window.innerHeight <= 420 )) 
+    if ((this.state.inMobile === false && window.innerWidth < 710) || (window.innerWidth < 813 && window.innerHeight <= 420 )) 
     { 
       this.setState({inMobile: true, content:false, pageTransition:0})
     }
@@ -212,14 +212,14 @@ class App extends React.Component
           </div>
         </div>
         <div className="footer">
-            <a href="">
-              <img src={EmailIcon}></img>
+            <a href="mailto: greg@hansenla.com">
+              <img src={EmailIcon} alt="email"></img>
             </a>
-            <a href="">
-              <img src={LinkedInIcon}></img>
+            <a href="https://www.linkedin.com/in/gregory-a-hansen-00b01744/">
+              <img src={LinkedInIcon} alt="Linkedin"></img>
             </a>
-            <a href="">
-              <img src={FBIcon}></img>
+            <a href="#">
+              <img src={FBIcon} alt="Facebook"></img>
             </a>
           </div>
         </Router>

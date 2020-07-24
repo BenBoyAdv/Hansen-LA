@@ -74,12 +74,7 @@ class Project extends React.Component
     }
   }
 
-  ifLightbox = () => {
-    if (!this.props.anyActive || this.props.inMobile && this.props.isActive) {
-      // this.ifProjectBox()
-      console.log('lightbox function')
-    } 
-  }
+
 
   projectDisplayType = () => {
     

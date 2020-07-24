@@ -7,7 +7,6 @@ import projectLib from '../projects';
 function PublicWork (props)
 {
     const inMobile = props.inMobile;
-    const workIndex = props.workIndex;
     
     
     const allProjects = [];
