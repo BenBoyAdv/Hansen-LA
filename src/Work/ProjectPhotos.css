@@ -3,13 +3,13 @@
 /* HEADERS */
 
 .medical-header {
-  background-image: url('../Assets/ProjectPhotos/Public/MedicalHeader.svg);
+  background-image: url('../Assets/ProjectPhotos/Public/MedicalHeader.svg');
 }
 .education-header {
-  background-image: url('../Assets/ProjectPhotos/Public/EducationHeader.svg);
+  background-image: url('../Assets/ProjectPhotos/Public/EducationHeader.svg');
 }
 .commercial-header {
-  background-image: url('../Assets/ProjectPhotos/Public/CommercialHeader.svg);
+  background-image: url('../Assets/ProjectPhotos/Public/CommercialHeader.svg');
 }
 
 /* PUBLIC PHOTOS */
