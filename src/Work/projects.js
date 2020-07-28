@@ -28,17 +28,17 @@ const projectLib = {
             isHeading: false,
             headingText: ''
         },
-        // {
-        //     name: "LITTLE SHADES CREEK", 
-        //     projectPhotos:[
-        //         'public-little-shade1',
-        //         'public-little-shade2',
-        //         'public-little-shade3',
-        //         'public-little-shade4'
-        //     ],
-        //     isHeading: false,
-        //     headingText: ''
-        // },
+        {
+            name: "LITTLE SHADES CREEK", 
+            projectPhotos:[
+                'public-little-shade1',
+                'public-little-shade2',
+                'public-little-shade3',
+                'public-little-shade4'
+            ],
+            isHeading: false,
+            headingText: ''
+        },
         {
             name: "MORGAN DRIVE", 
             projectPhotos:[
