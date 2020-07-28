@@ -11,7 +11,7 @@ const projectLib = {
             headingText: 'PUBLIC'
         },
         {
-            name: "Childrens Park", 
+            name: "CHILDRENS PARK", 
             projectPhotos:[
                 'public-childrens-park1', 'public-childrens-park2','public-childrens-park3'
             ],
@@ -19,7 +19,7 @@ const projectLib = {
             headingText: ''
         },
         {
-            name: "Bridge Park", 
+            name: "BRIDGE PARK", 
             projectPhotos:[
                 'public-bridge-park1',
                 'public-bridge-park2',
@@ -29,7 +29,7 @@ const projectLib = {
             headingText: ''
         },
         {
-            name: "Little Shades Creek Park", 
+            name: "LITTLE SHADES CREEK", 
             projectPhotos:[
                 'public-little-shade1',
                 'public-little-shade2',
@@ -40,7 +40,7 @@ const projectLib = {
             headingText: ''
         },
         {
-            name: "Morgan Dr", 
+            name: "MORGAN DRIVE", 
             projectPhotos:[
                 'public-morgan-drive1'
             ],
@@ -70,7 +70,7 @@ const projectLib = {
             headingText: ''
         },
         {
-            name: "Dothan Medical", 
+            name: "DOTHAN MEDICAL", 
             projectPhotos:[
                 'medical-Dothan-Medical1',
                 'medical-Dothan-Medical2',
@@ -79,7 +79,7 @@ const projectLib = {
             headingText: ''
         },
         {
-            name: "Medical West", 
+            name: "MEDICAL WEST", 
             projectPhotos:[
                 'medical-Medical-West1',
                 'medical-Medical-West2',
@@ -88,7 +88,7 @@ const projectLib = {
             headingText: ''
         },
         {
-            name: "Dublin VA", 
+            name: "DUBLIN VA", 
             projectPhotos:[
                 'medical-Dublin-VA1',
                 'medical-Dublin-VA2',
@@ -98,7 +98,7 @@ const projectLib = {
             headingText: ''
         },
         {
-            name: "Baptist South", 
+            name: "BAPTIST SOUTH", 
             projectPhotos:[
                 'medical-Baptist-South1',
             ],
@@ -117,7 +117,7 @@ const projectLib = {
             headingText: 'EDUCATION'
         },
         {
-            name: "Bolding Gardens", 
+            name: "BOLDING GARDENS", 
             projectPhotos:[
                 'education-Bolding-Gardens1',
                 'education-Bolding-Gardens2',
@@ -131,7 +131,7 @@ const projectLib = {
             headingText: ''
         },
         {
-            name: "Brewer Plaza", 
+            name: "BREWER PLAZA", 
             projectPhotos:[
                 'education-Brewer-Plaza1',
                 'education-Brewer-Plaza2',
@@ -141,7 +141,7 @@ const projectLib = {
             headingText: ''
         },
         {
-            name: "Arena", 
+            name: "ARENA", 
             projectPhotos:[
                 'education-Arena1',
                 'education-Arena2',
@@ -156,7 +156,7 @@ const projectLib = {
             headingText: ''
         },
         {
-            name: "Boren Gardens", 
+            name: "BOREN GARDENS", 
             projectPhotos:[
                 'education-Boren-Gardens1',
                 'education-Boren-Gardens2',
@@ -167,7 +167,7 @@ const projectLib = {
             headingText: ''
         },
         {
-            name: "Samford Selects", 
+            name: "SAMFORD SELECTS", 
             projectPhotos:[
                 'education-Samford-Selects1',
                 'education-Samford-Selects2',
