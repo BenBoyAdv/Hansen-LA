@@ -3,55 +3,55 @@
 /* HEADERS */
 
 .medical-header {
-  background-image: url(../Assets/ProjectPhotos/Public/MedicalHeader.svg);
+  background-image: url('../Assets/ProjectPhotos/Public/MedicalHeader.svg);
 }
 .education-header {
-  background-image: url(../Assets/ProjectPhotos/Public/EducationHeader.svg);
+  background-image: url('../Assets/ProjectPhotos/Public/EducationHeader.svg);
 }
 .commercial-header {
-  background-image: url(../Assets/ProjectPhotos/Public/CommercialHeader.svg);
+  background-image: url('../Assets/ProjectPhotos/Public/CommercialHeader.svg);
 }
 
 /* PUBLIC PHOTOS */
 
 .public-childrens-park1 {
-  background-image: url(../Assets/ProjectPhotos/Public/ChildrensPark/ChildrensPark1.jpg);
+  background-image: url('../Assets/ProjectPhotos/Public/ChildrensPark/ChildrensPark1.jpg');
 }
 .public-childrens-park2 {
-  background-image: url(../Assets/ProjectPhotos/Public/ChildrensPark/ChildrensPark2.jpg);
+  background-image: url('../Assets/ProjectPhotos/Public/ChildrensPark/ChildrensPark2.jpg');
 }
 .public-childrens-park3 {
-  background-image: url(../Assets/ProjectPhotos/Public/ChildrensPark/ChildrensPark3.jpg);
+  background-image: url('../Assets/ProjectPhotos/Public/ChildrensPark/ChildrensPark3.jpg');
 }
 
 .public-bridge-park1 {
-  background-image: url(../Assets/ProjectPhotos/Public/BridgePark/Park\ 2.jpg);
+  background-image: url('../Assets/ProjectPhotos/Public/BridgePark/Park2.jpg');
   background-position-y: top;
 }
 
 .public-bridge-park2 {
-  background-image: url(../Assets/ProjectPhotos/Public/BridgePark/Park\ 3.jpg);
+  background-image: url('../Assets/ProjectPhotos/Public/BridgePark/Park3.jpg');
 }
 .public-bridge-park3 {
-  background-image: url(../Assets/ProjectPhotos/Public/BridgePark/Park\ 4.jpg);
+  background-image: url('../Assets/ProjectPhotos/Public/BridgePark/Park4.jpg');
 }
 
 .public-little-shade1 {
-  background-image: url(../Assets/ProjectPhotos/Public/LittleShadesCreek/LittleShade1.jpg);
+  background-image: url('../Assets/ProjectPhotos/Public/LittleShadesCreek/LittleShade1.jpg');
   background-position-y: top;
 }
 .public-little-shade2 {
-  background-image: url(../Assets/ProjectPhotos/Public/LittleShadesCreek/LittleShade2.jpg);
+  background-image: url('../Assets/ProjectPhotos/Public/LittleShadesCreek/LittleShade2.jpg');
 }
 .public-little-shade3 {
-  background-image: url(../Assets/ProjectPhotos/Public/LittleShadesCreek/LittleShade3.JPG);
+  background-image: url('../Assets/ProjectPhotos/Public/LittleShadesCreek/LittleShade3.JPG');
 }
 .public-little-shade4 {
-  background-image: url(../Assets/ProjectPhotos/Public/LittleShadesCreek/LittleShade4.jpg);
+  background-image: url('../Assets/ProjectPhotos/Public/LittleShadesCreek/LittleShade4.jpg');
 }
 
 .public-morgan-drive1 {
-  background-image: url(../Assets/ProjectPhotos/Public/Morgan\ Drive/MorganDrive1.jpg);
+  background-image: url('../Assets/ProjectPhotos/Public/MorganDrive/MorganDrive1.jpg');
   background-position-y: top;
 }
 
@@ -60,44 +60,44 @@
 
 
 .medical-UAB1{
-  background-image: url(../Assets/ProjectPhotos/Medical/UAB/UAB1.jpg);
+  background-image: url('../Assets/ProjectPhotos/Medical/UAB/UAB1.jpg');
 }
 .medical-UAB2{
-  background-image: url(../Assets/ProjectPhotos/Medical/UAB/UAB2.jpg);
+  background-image: url('../Assets/ProjectPhotos/Medical/UAB/UAB2.jpg');
 }
 .medical-UAB3{
-  background-image: url(../Assets/ProjectPhotos/Medical/UAB/UAB3.jpg);
+  background-image: url('../Assets/ProjectPhotos/Medical/UAB/UAB3.jpg');
 }
 .medical-UAB4{
-  background-image: url(../Assets/ProjectPhotos/Medical/UAB/UAB4.jpg);
+  background-image: url('../Assets/ProjectPhotos/Medical/UAB/UAB4.jpg');
 }
 
 .medical-Dothan-Medical1 {
-  background-image: url(../Assets/ProjectPhotos/Medical/DothanMedical/DothanMedical1.jpg);
+  background-image: url('../Assets/ProjectPhotos/Medical/DothanMedical/DothanMedical1.jpg');
 }
 .medical-Dothan-Medical2 {
-  background-image: url(../Assets/ProjectPhotos/Medical/DothanMedical/DothanMedical2.jpg);
+  background-image: url('../Assets/ProjectPhotos/Medical/DothanMedical/DothanMedical2.jpg');
 }
 
 .medical-Medical-West1 {
-  background-image: url(../Assets/ProjectPhotos/Medical/MedicalWest/MedicalWest1.jpg);
+  background-image: url('../Assets/ProjectPhotos/Medical/MedicalWest/MedicalWest1.jpg');
 }
 .medical-Medical-West2 {
-  background-image: url(../Assets/ProjectPhotos/Medical/MedicalWest/MedicalWest2.jpg);
+  background-image: url('../Assets/ProjectPhotos/Medical/MedicalWest/MedicalWest2.jpg');
 }
 
 .medical-Dublin-VA1 {
-  background-image: url(../Assets/ProjectPhotos/Medical/DublinVA/DublinVA1.jpg)
+  background-image: url('../Assets/ProjectPhotos/Medical/DublinVA/DublinVA1.jpg')
 }
 .medical-Dublin-VA2 {
-  background-image: url(../Assets/ProjectPhotos/Medical/DublinVA/DublinVA2.jpg)
+  background-image: url('../Assets/ProjectPhotos/Medical/DublinVA/DublinVA2.jpg')
 }
 .medical-Dublin-VA3 {
-  background-image: url(../Assets/ProjectPhotos/Medical/DublinVA/DublinVA3.jpg)
+  background-image: url('../Assets/ProjectPhotos/Medical/DublinVA/DublinVA3.jpg')
 }
 
 .medical-Baptist-South1 {
-  background-image: url(../Assets/ProjectPhotos/Medical/BaptistSouth/BaptistSouth1.jpg)
+  background-image: url('../Assets/ProjectPhotos/Medical/BaptistSouth/BaptistSouth1.jpg')
 }
 
 
@@ -106,83 +106,83 @@
 
 
 .education-Bolding-Gardens1 {
-  background-image: url(../Assets/ProjectPhotos/Education/BoldingGardens/BoldingGardens1.jpg)
+  background-image: url('../Assets/ProjectPhotos/Education/BoldingGardens/BoldingGardens1.jpg')
 }
 .education-Bolding-Gardens2 {
-  background-image: url(../Assets/ProjectPhotos/Education/BoldingGardens/BoldingGardens2.jpg)
+  background-image: url('../Assets/ProjectPhotos/Education/BoldingGardens/BoldingGardens2.jpg')
 }
 .education-Bolding-Gardens3 {
-  background-image: url(../Assets/ProjectPhotos/Education/BoldingGardens/BoldingGardens3.jpg)
+  background-image: url('../Assets/ProjectPhotos/Education/BoldingGardens/BoldingGardens3.jpg')
 }
 .education-Bolding-Gardens4 {
-  background-image: url(../Assets/ProjectPhotos/Education/BoldingGardens/BoldingGardens4.jpg)
+  background-image: url('../Assets/ProjectPhotos/Education/BoldingGardens/BoldingGardens4.jpg')
 }
 .education-Bolding-Gardens5 {
-  background-image: url(../Assets/ProjectPhotos/Education/BoldingGardens/BoldingGardens5.jpg)
+  background-image: url('../Assets/ProjectPhotos/Education/BoldingGardens/BoldingGardens5.jpg')
 }
 .education-Bolding-Gardens6 {
-  background-image: url(../Assets/ProjectPhotos/Education/BoldingGardens/BoldingGardens6.jpg)
+  background-image: url('../Assets/ProjectPhotos/Education/BoldingGardens/BoldingGardens6.jpg')
 }
 .education-Bolding-Gardens7 {
-  background-image: url(../Assets/ProjectPhotos/Education/BoldingGardens/BoldingGardens7.jpg)
+  background-image: url('../Assets/ProjectPhotos/Education/BoldingGardens/BoldingGardens7.jpg')
 }
 
 .education-Brewer-Plaza1 {
-  background-image: url(../Assets/ProjectPhotos/Education/BrewerPlaza/BrewerPlaza1.jpg)
+  background-image: url('../Assets/ProjectPhotos/Education/BrewerPlaza/BrewerPlaza1.jpg')
 }
 .education-Brewer-Plaza2 {
-  background-image: url(../Assets/ProjectPhotos/Education/BrewerPlaza/BrewerPlaza2.jpg)
+  background-image: url('../Assets/ProjectPhotos/Education/BrewerPlaza/BrewerPlaza2.jpg')
 }
 .education-Brewer-Plaza3 {
-  background-image: url(../Assets/ProjectPhotos/Education/BrewerPlaza/BrewerPlaza3.jpg)
+  background-image: url('../Assets/ProjectPhotos/Education/BrewerPlaza/BrewerPlaza3.jpg')
 }
 
 .education-Arena1 {
-  background-image: url(../Assets/ProjectPhotos/Education/Arena/Arena1.jpg)
+  background-image: url('../Assets/ProjectPhotos/Education/Arena/Arena1.jpg')
 }
 .education-Arena2 {
-  background-image: url(../Assets/ProjectPhotos/Education/Arena/Arena2.jpg)
+  background-image: url('../Assets/ProjectPhotos/Education/Arena/Arena2.jpg')
 }
 .education-Arena3 {
-  background-image: url(../Assets/ProjectPhotos/Education/Arena/Arena3.jpg)
+  background-image: url('../Assets/ProjectPhotos/Education/Arena/Arena3.jpg')
 }
 .education-Arena4 {
-  background-image: url(../Assets/ProjectPhotos/Education/Arena/Arena4.jpg)
+  background-image: url('../Assets/ProjectPhotos/Education/Arena/Arena4.jpg')
 }
 .education-Arena5 {
-  background-image: url(../Assets/ProjectPhotos/Education/Arena/Arena5.jpg)
+  background-image: url('../Assets/ProjectPhotos/Education/Arena/Arena5.jpg')
 }
 .education-Arena6 {
-  background-image: url(../Assets/ProjectPhotos/Education/Arena/Arena6.jpg)
+  background-image: url('../Assets/ProjectPhotos/Education/Arena/Arena6.jpg')
 }
 .education-Arena7 {
-  background-image: url(../Assets/ProjectPhotos/Education/Arena/Arena7.jpg)
+  background-image: url('../Assets/ProjectPhotos/Education/Arena/Arena7.jpg')
 }
 .education-Arena8 {
-  background-image: url(../Assets/ProjectPhotos/Education/Arena/Arena8.jpg)
+  background-image: url('../Assets/ProjectPhotos/Education/Arena/Arena8.jpg')
 }
 
 .education-Boren-Gardens1 {
-  background-image: url(../Assets/ProjectPhotos/Education/BorenGardens/BorenGardens1.jpg)
+  background-image: url('../Assets/ProjectPhotos/Education/BorenGardens/BorenGardens1.jpg')
 }
 .education-Boren-Gardens2 {
-  background-image: url(../Assets/ProjectPhotos/Education/BorenGardens/BorenGardens2.jpg)
+  background-image: url('../Assets/ProjectPhotos/Education/BorenGardens/BorenGardens2.jpg')
 }
 .education-Boren-Gardens3 {
-  background-image: url(../Assets/ProjectPhotos/Education/BorenGardens/BorenGardens3.JPG)
+  background-image: url('../Assets/ProjectPhotos/Education/BorenGardens/BorenGardens3.JPG')
 }
 .education-Boren-Gardens4 {
-  background-image: url(../Assets/ProjectPhotos/Education/BorenGardens/BorenGardens4.JPG)
+  background-image: url('../Assets/ProjectPhotos/Education/BorenGardens/BorenGardens4.JPG')
 }
 
 .education-Samford-Selects1 {
-  background-image: url(../Assets/ProjectPhotos/Education/SamfordSelects/SamfordSelects1.jpg)
+  background-image: url('../Assets/ProjectPhotos/Education/SamfordSelects/SamfordSelects1.jpg')
 }
 .education-Samford-Selects2 {
-  background-image: url(../Assets/ProjectPhotos/Education/SamfordSelects/SamfordSelects2.jpg)
+  background-image: url('../Assets/ProjectPhotos/Education/SamfordSelects/SamfordSelects2.jpg')
 }
 .education-Samford-Selects3 {
-  background-image: url(../Assets/ProjectPhotos/Education/SamfordSelects/SamfordSelects3.jpg)
+  background-image: url('../Assets/ProjectPhotos/Education/SamfordSelects/SamfordSelects3.jpg')
 }
 
 
