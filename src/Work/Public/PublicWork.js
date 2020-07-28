@@ -21,7 +21,7 @@ function PublicWork (props)
                     return allProjects.push(element)
                 });
             }
-            console.log('mobile')
+            // console.log('mobile')
         }
         // else if (inMobile === false) {
         //     allProjects.length = 0;
