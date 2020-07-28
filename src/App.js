@@ -1,4 +1,5 @@
 import React from 'react';
+import './reset.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import WorkContent from './Work/WorkContent';
 import AboutContent from './About/AboutContent';
@@ -25,7 +26,6 @@ class App extends React.Component
     {
       this.setState({inMobile:false, mobileMenu: null})
     }
-    else {console.log(this.state.inMobile)}
     
   }
   getSize = _.throttle(function(){
@@ -40,7 +40,6 @@ class App extends React.Component
         this.setState({inMobile: false})
       ),500)
     }
-    // console.log(this.state.inMobile)
   }
   
 
@@ -70,7 +69,6 @@ class App extends React.Component
     let isMenu = this.state.mobileMenu;
     (isMenu === null || isMenu === 0) ? (this.setState({mobileMenu: 1})) :
     (this.setState({mobileMenu: 0}))
-    console.log(this.state.inMobile)
   }
 
   isActive = (index) => {
@@ -91,7 +89,6 @@ class App extends React.Component
 
   workActivate = (index) => {
     this.setState({workActive: index})
-    setTimeout(()=> (console.log(this.state.workActive)),300)
   }
 
   
@@ -173,7 +170,7 @@ class App extends React.Component
             (this.state.mobileMenu) ? 'content mobile-content-down' :
             (this.state.activePage === 0) ? 'content' :
             (this.state.activePage > 0 && this.state.pageTransition === 1) ? "content content-transition-A":
-            (this.state.activePage > 0 && this.state.pageTransition === 2) ? "c-selected content-transition-B":
+            (this.state.activePage > 0 && this.state.pageTransition === 2) ? "content content-transition-B":
             (this.state.activePage > 0 && this.state.pageTransition === 0 && this.state.content) ? 'c-selected' :
             (this.state.activePage && !this.state.content) ? 'content' :
             'content' 
