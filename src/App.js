@@ -215,7 +215,7 @@ class App extends React.Component
             <a href="https://www.linkedin.com/in/gregory-a-hansen-00b01744/">
               <img src={LinkedInIcon} alt="Linkedin"></img>
             </a>
-            <a href="#">
+            <a href="https://www.facebook.com/greg.hansen.712714">
               <img src={FBIcon} alt="Facebook"></img>
             </a>
           </div>

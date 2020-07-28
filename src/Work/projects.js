@@ -29,7 +29,7 @@ const projectLib = {
             headingText: ''
         },
         {
-            name: "Little Shade Park", 
+            name: "Little Shades Creek Park", 
             projectPhotos:[
                 'public-little-shade1',
                 'public-little-shade2',

@@ -963,10 +963,7 @@ a:link, a:visited {
     justify-content: space-between;
     top: 40%;
   }
-  .work-content{
-    /* padding-top: 2%; */
-    /* padding-bottom: 2%; */
-  }
+  
   
   .project-box {
     height: 4.4em;
@@ -1250,9 +1247,7 @@ to{height: 4.4em; opacity: 0.8;}
 }
 
 @media only screen and (max-width: 600px) {
-  .about-photo {
-    /* margin-left: 15%; */
-  }
+ 
   .about-container {
     height: 100%;
   }
@@ -1276,17 +1271,12 @@ to{height: 4.4em; opacity: 0.8;}
     background-position-y: center;
   }
 
-  .content {
-    /* top: 4.5em; */
-  }
+ 
   .about-photo{
     background-size: cover;
     margin-left: 0%;
     width: 25em;
     height: 100%;
-  }
-  .work-content{
-    /* padding-top: 2%; */
   }
 }
 
