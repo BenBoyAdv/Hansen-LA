@@ -16,8 +16,6 @@
 
 .public-childrens-park1 {
   background-image: url(../Assets/ProjectPhotos/Public/ChildrensPark/ChildrensPark1.jpg);
-  /* background-position-y: center; */
-  /* transition: background-position-y 1s; */
 }
 .public-childrens-park2 {
   background-image: url(../Assets/ProjectPhotos/Public/ChildrensPark/ChildrensPark2.jpg);
@@ -41,7 +39,6 @@
 .public-little-shade1 {
   background-image: url(../Assets/ProjectPhotos/Public/LittleShadesCreek/LittleShade1.jpg);
   background-position-y: top;
-  /* transition: background-position-y 1s; */
 }
 .public-little-shade2 {
   background-image: url(../Assets/ProjectPhotos/Public/LittleShadesCreek/LittleShade2.jpg);
@@ -56,7 +53,6 @@
 .public-morgan-drive1 {
   background-image: url(../Assets/ProjectPhotos/Public/Morgan\ Drive/MorganDrive1.jpg);
   background-position-y: top;
-  /* transition: background-position-y 1s; */
 }
 
 
@@ -220,7 +216,6 @@
   .lightbox {
     position: fixed;
     top: 0;
-    /* background-color: black;  */
     width: 100vw;
     height: 100vh;
     z-index: 50000000;

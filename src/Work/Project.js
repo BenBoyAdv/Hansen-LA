@@ -79,8 +79,6 @@ class Project extends React.Component
   projectDisplayType = () => {
     
       return (
-        // (this.props.inMobile && this.props.isActive && this.props.isLightbox) ? `active ${this.props.projectPhotos[this.state.activeSlide]}` :
-        // (this.props.inMobile && this.props.isActive === false && this.props.anyActive) ? `inactive ${this.props.projectPhotos[this.state.activeSlide]}` : 
         (this.props.isActive && this.props.isTransition) ? `a-transition ${this.props.projectPhotos[this.state.activeSlide]}` : 
         this.props.isActive ? `active ${this.props.projectPhotos[this.state.activeSlide]}` : 
         (!this.props.isActive && this.props.isTransition && this.props.isHeading) ? `section-head header-grow` : 
