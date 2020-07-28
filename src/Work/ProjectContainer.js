@@ -21,12 +21,12 @@ class ProjectContainer extends React.Component {
         let currentState = this.state.anyActive
         if(this.props.inMobile) {
             !currentState ? (this.setState({activeIndex:index, anyActive:true, transition:false , lightbox: true})) : 
-            console.log('click off')
+            console.log('click deactivated')
         }
         else
         {
             !currentState ? (this.setState({activeIndex:index, anyActive:true, transition:false})) : 
-            (console.log('click off'))
+            (console.log('click deactivated'))
 
         }
     }
