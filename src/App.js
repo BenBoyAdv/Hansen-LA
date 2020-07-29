@@ -204,7 +204,7 @@ class App extends React.Component
             />
             <Route path="/About" component={AboutContent}/>
             <Route path="/Contact" component={ContactContent}/>
-            <Route path="/Home" component={HomeContent}/>
+            <Route path="/" component={HomeContent}/>
           </Switch>
           </div>
         </div>
