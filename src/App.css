@@ -979,6 +979,10 @@ a:link, a:visited {
   
   .project-box {
     height: 4.4em;
+    font-family: 'Raleway', sans-serif;
+  color: #FFFFF2;
+  line-height: 8em;
+  font-size: 2em;
   }
   .project-box:hover 
   {
@@ -1001,17 +1005,52 @@ a:link, a:visited {
 
 @keyframes aTransition
 {
-from {height: 35em; opacity: 1.0; background-position-y: top;}
-to {height: 4.4em; opacity: 0.8; background-position-y: center;}
+from {
+  height: 35em; 
+  opacity: 1.0; 
+  background-position-y: top;
+  font-family: 'Raleway', sans-serif;
+  color: #FFFFF2;
+  line-height: 8em;
+  font-size: 2em;
+}
+to {height: 4.4em; 
+  opacity: 0.8; 
+  background-position-y: center;
+  font-family: 'Raleway', sans-serif;
+  color: #FFFFF2;
+  line-height: 8em;
+  font-size: 2em;
+}
 }
 
 .a-transition
-{height: 35em;}
+{
+  height: 35em;
+  font-family: 'Raleway', sans-serif;
+  color: #FFFFF2;
+  line-height: 8em;
+  font-size: 2em;
+}
 
 @keyframes bTransition
 {
-from{height: 0em; opacity: 0.0;}
-to{height: 4.4em; opacity: 0.8;}
+from{
+  height: 0em; 
+  opacity: 0.0;
+  font-family: 'Raleway', sans-serif;
+  color: #FFFFF2;
+  line-height: 8em;
+  font-size: 2em;
+}
+to{
+  height: 4.4em; 
+  opacity: 0.8;
+  font-family: 'Raleway', sans-serif;
+  color: #FFFFF2;
+  line-height: 8em;
+  font-size: 2em;
+}
 }
 
 .b-transition
