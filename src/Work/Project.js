@@ -84,7 +84,7 @@ class Project extends React.Component
         this.props.isActive ? `active ${this.props.projectPhotos[this.state.activeSlide]}` : 
         (!this.props.isActive && this.props.isTransition && this.props.isHeading) ? `section-head header-grow` : 
         (!this.props.isActive && this.props.isTransition) ? `b-transition ${this.props.projectPhotos[this.state.activeSlide]}` : 
-        (this.props.anyActive && this.props.isHeading) ? `section-head header-shrink` : 
+        (this.props.anyActive && this.props.isHeading) ? `section-head` : 
         this.props.anyActive ? `inactive ${this.props.projectPhotos[this.state.activeSlide]}` : 
         this.props.isHeading ? `section-head` :
         `project-box ${this.props.projectPhotos[this.state.activeSlide]}`
