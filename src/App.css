@@ -636,6 +636,7 @@ a:link, a:visited {
 
 .active
 {
+  padding-left: 5%;
   color: transparent;
   line-height: 0em;
   height: 11em;
@@ -647,7 +648,7 @@ a:link, a:visited {
   animation-name: boxGrow;
   animation-fill-mode: forwards;
   animation-duration: 1s;
-  transition: background-image 0.5s;
+  /* transition: background-image 0.5s; */
 }
 
 @keyframes boxGrow
@@ -658,6 +659,7 @@ a:link, a:visited {
 
 .inactive
 {
+  padding-left: 5%;
   color: transparent;
   height: 10em;
   width: 100%;
@@ -666,7 +668,7 @@ a:link, a:visited {
   animation-name: boxShrink;
   animation-fill-mode: forwards;
   animation-duration: 1s;
-  transition: background-image 0.5s, background-position-y 1s;
+  /* transition: background-image 0.5s, background-position-y 1s; */
   background-size: 100%;
   background-repeat: no-repeat;
 }
@@ -686,6 +688,7 @@ a:link, a:visited {
 
 .a-transition
 {
+  padding-left: 5%;
   color: transparent;
   font-size: 2em;
   height: 42em;
@@ -694,7 +697,7 @@ a:link, a:visited {
   animation-name: aTransition;
   animation-fill-mode: forwards;
   animation-duration: 1s;
-  transition: background-image 0.5s, background-position-y 1s;
+  /* transition: background-image 0.5s, background-position-y 1s; */
   background-size: 100%;
   background-repeat: no-repeat;
   background-position-y: center;
@@ -708,6 +711,7 @@ a:link, a:visited {
 
 .b-transition
 {
+  padding-left: 5%;
   /* color: transparent; */
   height: 0em;
   width: 100%;
@@ -716,7 +720,7 @@ a:link, a:visited {
   animation-name: bTransition;
   animation-fill-mode: forwards;
   animation-duration: 1s;
-  transition: background-image 0.5s, background-position-y 1s;
+  /* transition: background-image 0.5s, background-position-y 1s; */
   background-size: 100%;
   background-repeat: no-repeat;
   background-position-y: center;
