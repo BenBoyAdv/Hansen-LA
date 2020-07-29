@@ -197,7 +197,7 @@
     font-size: 3em;
     height: 10em;
     width: 100%;
-    background-image: linear-gradient(to right, #FFFFF2, #FFFFFF, transparent );
+    background-image: linear-gradient(to right, #FFFFF2, #FFFFFF);
     opacity: 1;
   }
   
