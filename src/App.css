@@ -647,7 +647,7 @@ a:link, a:visited {
   animation-name: boxGrow;
   animation-fill-mode: forwards;
   animation-duration: 1s;
-  transition: background-image 0.5s, background-position-y 1s;
+  transition: background-image 0.5s;
 }
 
 @keyframes boxGrow
@@ -757,7 +757,7 @@ a:link, a:visited {
   position: relative;
   display: flex;
   justify-content: space-between;
-  top: 35%;
+  top: 25%;
 }
 
 .select-project{
