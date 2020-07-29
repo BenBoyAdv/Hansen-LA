@@ -40,7 +40,7 @@ class Project extends React.Component
           onClick={this.handleClick}
           className={this.props.isHeading ? '' : 'select-project'}
         >
-          {!this.props.isActive? `${this.props.name}` : ''}
+          {!this.props.isActive || this.props.isTransition ? `${this.props.name}` : ''}
           <div id="close-box"
             onClick={this.closeBox}
             className=
@@ -105,7 +105,7 @@ class Project extends React.Component
         
         {this.props.heading}
         {this.ifProjectBox()}
-        <div className={this.props.inMobile && this.props.isActive ? 'rotate-icon' : 'noDisplay'}>
+        <div className={this.props.inMobile && this.props.isActive && !this.props.isTransition ? 'rotate-icon' : 'noDisplay'}>
             <img src={RotateIcon} alt="rotate phone"></img>
           </div>
         

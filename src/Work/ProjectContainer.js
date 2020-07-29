@@ -7,21 +7,21 @@ class ProjectContainer extends React.Component {
 
     //declare inMobile variable from this.props.inMobile
 
-    state = {activeIndex:null, anyActive:false, transition:false, lightbox:false}
+    state = {activeIndex:null, anyActive:false, transition:false}
 
     closeBox = (index) => {
         
-        this.setState({activeIndex:index, anyActive:true, transition:true, lightbox:false})
+        this.setState({activeIndex:index, anyActive:true, transition:true})
         setTimeout(()=>{
-            this.setState({activeIndex:null, anyActive:false, transition:false, lightbox: false})
+            this.setState({activeIndex:null, anyActive:false, transition:false})
         },1000)
     }
 
     handleClick = index => {
         let currentState = this.state.anyActive
         if(this.props.inMobile) {
-            !currentState ? (this.setState({activeIndex:index, anyActive:true, transition:false , lightbox: true})) : 
-            console.log('click deactivated')
+            !currentState ? (this.setState({activeIndex:index, anyActive:true, transition:false })) : 
+            this.closeBox()
         }
         else
         {
