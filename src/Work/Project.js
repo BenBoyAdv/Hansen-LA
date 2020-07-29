@@ -40,7 +40,7 @@ class Project extends React.Component
           onClick={this.handleClick}
           className={this.props.isHeading ? '' : 'select-project'}
         >
-          {!this.props.isActive? `${this.props.name}`: ''} :
+          {!this.props.isActive? `${this.props.name}` : ''}
           <div id="close-box"
             onClick={this.closeBox}
             className=
