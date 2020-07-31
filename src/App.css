@@ -853,7 +853,12 @@ a:link, a:visited {
   align-items: center;
   height: 3em;
   width: 100%;
-}                                                                                                                                                                                                              
+}
+
+.contact-container a{
+  color: #60a568;
+}
+
 .contact-type{
   font-family: 'Raleway', sans-serif;
   font-size: 1.2em;
