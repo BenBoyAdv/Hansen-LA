@@ -1193,7 +1193,7 @@ to{
   .content {
     top: 6em;
     transition: top 0.5s;
-    border-radius: 0px 0px 0px 0px;
+    border-radius: 10px 10px 0px 0px;
     overflow: hidden;
   }  
   
