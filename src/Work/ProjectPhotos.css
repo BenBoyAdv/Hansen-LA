@@ -1,17 +1,4 @@
 
-
-/* HEADERS */
-
-.medical-header {
-  background-image: url('../Assets/ProjectPhotos/Public/MedicalHeader.svg');
-}
-.education-header {
-  background-image: url('../Assets/ProjectPhotos/Public/EducationHeader.svg');
-}
-.commercial-header {
-  background-image: url('../Assets/ProjectPhotos/Public/CommercialHeader.svg');
-}
-
 /* PUBLIC PHOTOS */
 
 .public-childrens-park1 {
@@ -24,17 +11,7 @@
   background-image: url('../Assets/ProjectPhotos/Public/ChildrensPark/ChildrensPark3.jpg');
 }
 
-.public-bridge-park1 {
-  background-image: url('../Assets/ProjectPhotos/Public/BridgePark/Park2.jpg');
-  background-position-y: top;
-}
 
-.public-bridge-park2 {
-  background-image: url('../Assets/ProjectPhotos/Public/BridgePark/Park3.jpg');
-}
-.public-bridge-park3 {
-  background-image: url('../Assets/ProjectPhotos/Public/BridgePark/Park4.jpg');
-}
 
 .public-little-shade1 {
   background-image: url('../Assets/ProjectPhotos/Public/LittleShadesCreek/LittleShade1.jpg');
@@ -48,6 +25,32 @@
 }
 .public-little-shade4 {
   background-image: url('../Assets/ProjectPhotos/Public/LittleShadesCreek/LittleShade4.JPG');
+}
+.public-little-shade5 {
+  background-image: url('../Assets/ProjectPhotos/Public//LittleShadesCreek/LittleShade5.jpg');
+  background-position-y: top;
+}
+.public-little-shade6 {
+  background-image: url('../Assets/ProjectPhotos/Public/LittleShadesCreek/LittleShade6.jpg');
+}
+.public-little-shade7 {
+  background-image: url('../Assets/ProjectPhotos/Public/LittleShadesCreek/LittleShade7.jpg');
+}
+
+.public-bessemer-park1 {
+  background-image: url('../Assets/ProjectPhotos/Public/BessemerPark/BessemerPark-1.jpg');
+}
+.public-bessemer-park2 {
+  background-image: url('../Assets/ProjectPhotos/Public/BessemerPark/BessemerPark-2.jpg');
+}
+.public-bessemer-park3 {
+  background-image: url('../Assets/ProjectPhotos/Public/BessemerPark/BessemerPark-3.jpg');
+}
+.public-bessemer-park4 {
+  background-image: url('../Assets/ProjectPhotos/Public/BessemerPark/BessemerPark-4.jpg');
+}
+.public-bessemer-park5 {
+  background-image: url('../Assets/ProjectPhotos/Public/BessemerPark/BessemerPark-5.jpg');
 }
 
 .public-morgan-drive1 {
@@ -84,6 +87,13 @@
 }
 .medical-Medical-West2 {
   background-image: url('../Assets/ProjectPhotos/Medical/MedicalWest/MedicalWest2.jpg');
+}
+
+.medical-UAB-medicine1 {
+  background-image: url('../Assets/ProjectPhotos/Medical/UAB/UABMedicine-1.jpg');
+}
+.medical-UAB-medicine2 {
+  background-image: url('../Assets/ProjectPhotos/Medical/UAB/UABMedicine-2.jpg');
 }
 
 .medical-Dublin-VA1 {
@@ -125,6 +135,12 @@
 }
 .education-Bolding-Gardens7 {
   background-image: url('../Assets/ProjectPhotos/Education/BoldingGardens/BoldingGardens7.JPG')
+}
+.education-Bolding-Gardens8 {
+  background-image: url('../Assets/ProjectPhotos/Education/BoldingGardens/BoldingGardens8.jpg')
+}
+.education-Bolding-Gardens9 {
+  background-image: url('../Assets/ProjectPhotos/Education/BoldingGardens//BoldingGardens9.jpg')
 }
 
 .education-Brewer-Plaza1 {
@@ -174,6 +190,13 @@
 .education-Boren-Gardens4 {
   background-image: url('../Assets/ProjectPhotos/Education/BorenGardens/BorenGardens4.JPG')
 }
+.education-Boren-Gardens5 {
+  background-image: url('../Assets/ProjectPhotos/Education/BorenGardens/BorenGardens-5.jpg')
+}
+.education-Boren-Gardens6 {
+  background-image: url('../Assets/ProjectPhotos/Education/BorenGardens/BorenGardens-6.jpg')
+}
+
 
 .education-Samford-Selects1 {
   background-image: url('../Assets/ProjectPhotos/Education/SamfordSelects/SamfordSelects1.jpg')
@@ -184,16 +207,96 @@
 .education-Samford-Selects3 {
   background-image: url('../Assets/ProjectPhotos/Education/SamfordSelects/SamfordSelects3.jpg')
 }
+.education-Samford-Selects4 {
+  background-image: url('../Assets/ProjectPhotos/Education/SamfordSelects/SamfordSelects4.jpg')
+}
+.education-Samford-Selects5 {
+  background-image: url('../Assets/ProjectPhotos/Education/SamfordSelects/SamfordSelects5.jpg')
+}
+.education-Samford-Selects6 {
+  background-image: url('../Assets/ProjectPhotos/Education/SamfordSelects/SamfordSelects6.jpg')
+}
+
+.education-lawson-state1 {
+  background-image: url('../Assets/ProjectPhotos/Education/LawsonState/LawsonState1.jpg');
+}
+
+.education-UWA1 {
+  background-image: url('../Assets/ProjectPhotos/Education/UWA/UWA-1.jpg');
+}
+
+.education-4h-center1 {
+  background-image: url('../Assets/ProjectPhotos/Education/4HCenter/4HCenter-1.jpg');
+}
+.education-4h-center2 {
+  background-image: url('../Assets/ProjectPhotos/Education/4HCenter/4HCenter-2.jpg');
+}
+.education-4h-center3 {
+  background-image: url('../Assets/ProjectPhotos/Education/4HCenter/4HCenter-3.jpg');
+}
+
+
+/* RELIGIOUS PHOTOS */
+
+
+.religious-highland-church1 {
+  background-image: url('../Assets/ProjectPhotos/Religious/HighlandsUM/HighlandsUnitedMethodist-1.jpg');
+}
+.religious-highland-church2 {
+  background-image: url('../Assets/ProjectPhotos/Religious/HighlandsUM/HighlandsUnitedMethodist-2.jpg');
+}
+.religious-highland-church3 {
+  background-image: url('../Assets/ProjectPhotos/Religious/HighlandsUM/HighlandsUnitedMethodist-3.jpg');
+}
+.religious-highland-church4 {
+  background-image: url('../Assets/ProjectPhotos/Religious/HighlandsUM/HighlandsUnitedMethodist-4.jpg');
+}
+
+.religious-mountain-church1 {
+  background-image: url('../Assets/ProjectPhotos/Religious/MtnChurch/MtnChurch-1.jpg');
+}
+
+
+/* RESIDENTIAL PHOTOS */
+
+.residential-1 {
+  background-image: url('../Assets/ProjectPhotos/Residential/Residential-1.jpg');
+}
+.residential-2 {
+  background-image: url('../Assets/ProjectPhotos/Residential/Residential-2.jpg');
+}
+.residential-3 {
+  background-image: url('../Assets/ProjectPhotos/Residential/Residential-3.jpg');
+}
+.residential-4 {
+  background-image: url('../Assets/ProjectPhotos/Residential/Residential-4.jpg');
+}
+.residential-5 {
+  background-image: url('../Assets/ProjectPhotos/Residential/Residential-5.jpg');
+}
+
+/* COMMERCIAL PHOTOS */
+
+.commercial-golds-gym1 {
+  background-image: url('../Assets/ProjectPhotos/Commercial/GoldsGym/GoldsGym-1.jpg');
+}
+.commercial-golds-gym2 {
+  background-image: url('../Assets/ProjectPhotos/Commercial/GoldsGym/GoldsGym-2.jpg');
+}
+
+.commercial-CandM1 {
+  background-image: url('../Assets/ProjectPhotos/Commercial/CM/CM-1.jpg');
+}
 
 
 
 /* STYLINGS */
 
   .section-head {
-    padding: 0.7em 0em 0.7em 1em;
+    padding: 0.7em 0em 0.7em 1.2em;
     font-family: 'Raleway', sans-serif;
-    color: #5BC38D;
-    letter-spacing: 1em;
+    color: #60a568;
+    letter-spacing: 0.3em;
     font-size: 3em;
     height: 8em;
     width: 100%;

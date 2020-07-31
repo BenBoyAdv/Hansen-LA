@@ -37,7 +37,7 @@ class Project extends React.Component
       return (
         <div id=
             "project-activate-window"
-          onClick={this.handleClick}
+          onClick={!this.props.anyActive ? this.handleClick : console.log('click-off')}
           className={this.props.isHeading ? '' : 'select-project'}
         >
           {!this.props.isActive || this.props.isTransition ? `${this.props.name}` : ''}

@@ -7,7 +7,7 @@
 
 a:link, a:visited {
   text-decoration: none;
-  color: #5BC38D;
+  color: #FFFFF2;
 }
 
 .noDisplay {
@@ -30,7 +30,7 @@ a:link, a:visited {
   height: 100vh;
   width: 100%;
   overflow: hidden;
-  background-image: linear-gradient(#B5E8BB, #FFFFFF 19%, #FFFFFF);
+  background-image: linear-gradient(#60a568, #FFFFFF);
 }
 
 .flex-col{
@@ -136,6 +136,7 @@ a:link, a:visited {
 .company-wrap {
   width: 20em;
   height: 3em;
+  padding-top: 0.5em;
 }
 
 .company-wrap-transition-A {
@@ -144,6 +145,7 @@ a:link, a:visited {
   animation-name: cWrapTransA;
   animation-duration: 1s;
   animation-fill-mode: forwards;
+  padding-top: 0.5em;
 }
 
 @keyframes cWrapTransA {
@@ -157,6 +159,7 @@ a:link, a:visited {
   animation-name: cWrapTransB;
   animation-duration: 1s;
   animation-fill-mode: forwards;
+  padding-top: 0.5em;
 }
 
 @keyframes cWrapTransB {
@@ -169,7 +172,7 @@ a:link, a:visited {
   opacity: 1.0;
   text-align: center;
   width: 25vw;
-  color: #5BC38D;
+  color: #FFFFF2;
   white-space: nowrap;
   font-family: 'Raleway', sans-serif;
   font-size: 1.5em;
@@ -178,7 +181,7 @@ a:link, a:visited {
 
 .company-title-transition-A{
   display: inline-block;
-  color: #5BC38D;
+  color: #FFFFF2;
   opacity: 1.0;
   text-align: center;
   width: 25vw;
@@ -200,7 +203,7 @@ a:link, a:visited {
 }
 
 .company-title-transition-B{
-  color: #5BC38D;
+  color: #FFFFF2;
   display: inline-block;
   opacity: 0.0;
   text-align: center;
@@ -342,12 +345,11 @@ a:link, a:visited {
   from  {font-size: 1em; padding-bottom: 1em;}
   to  {
     font-size: 3em;
-    background: -webkit-linear-gradient(#90E86D, #5BC38D);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #5BC38D;
     padding-bottom: 0em;
     padding-top: 1em;
-    opacity: 0.6;
+    margin-left: 0.5em;
+    opacity: 0.8;
     width: 6em;
   }
 }
@@ -618,7 +620,7 @@ a:link, a:visited {
   width: 100%;
   opacity: 0.8;
   padding-left: 5%;
-  transition: opacity 1s, background-position-y 1s;
+  transition: height 0.5s, opacity 1s, background-position-y 1s;
   background-size: 100%;
   background-repeat: no-repeat;
   background-position-y: center; 
@@ -630,7 +632,7 @@ a:link, a:visited {
 
 .project-box:hover 
 {
-  height: 5.1em;
+  height: 5.3em;
   opacity: 1.0;
 }
 
@@ -712,7 +714,7 @@ a:link, a:visited {
 .b-transition
 {
   padding-left: 5%;
-  /* color: transparent; */
+  color: transparent;
   height: 0em;
   width: 100%;
   opacity: 0.0;
@@ -734,6 +736,8 @@ a:link, a:visited {
   width: 4%;
   margin-top: 2%;
   margin-right: 1em;
+  margin-bottom: 1em;
+  margin-left: 1em;
   background-size: contain;
   background-repeat: no-repeat;
   animation-name: closeFade;
@@ -923,7 +927,8 @@ a:link, a:visited {
   justify-content: center;
   align-items: center;
   z-index: 10;
-  background-color: #B5E8BB;
+  background: linear-gradient(#7dc285,#60a568);
+  /* background-color: #7dc285; */
   position: fixed;
   bottom: 0;
   width: 100%;
@@ -1157,7 +1162,7 @@ to{
     width: 6em;
     height: 100%;
     font-size: 1.2rem;
-    color: #5BC38D;
+    color: #FFFFF2;
   }
   .div-wrap {
    width: 0em;
