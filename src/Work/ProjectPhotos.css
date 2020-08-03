@@ -401,6 +401,314 @@
       letter-spacing: 0.5em;
       padding: 0.5em 0em 0.02em 0.5em;
     }
+
+
+
+
+
+
+
+    /* PUBLIC PHOTOS */
+
+.public-childrens-park1 {
+  background-image: url('../Assets/ProjectPhotos/Public/ChildrensPark/mobile/ChildrensPark1-mobile.jpg');
+}
+.public-childrens-park2 {
+  background-image: url('../Assets/ProjectPhotos/Public/ChildrensPark/mobile/ChildrensPark2-mobile.jpg');
+}
+.public-childrens-park3 {
+  background-image: url('../Assets/ProjectPhotos/Public/ChildrensPark/mobile/ChildrensPark3-mobile.jpg');
+}
+
+
+
+.public-little-shade1 {
+  background-image: url('../Assets/ProjectPhotos/Public/LittleShadesCreek/mobile/LittleShade1-mobile.jpg');
+  background-position-y: top;
+}
+.public-little-shade2 {
+  background-image: url('../Assets/ProjectPhotos/Public/LittleShadesCreek/mobile/LittleShade2-mobile.jpg');
+}
+.public-little-shade3 {
+  background-image: url('../Assets/ProjectPhotos/Public/LittleShadesCreek/mobile/LittleShade3-mobile.jpg');
+}
+.public-little-shade4 {
+  background-image: url('../Assets/ProjectPhotos/Public/LittleShadesCreek/mobile/LittleShade4-mobile.jpg');
+}
+.public-little-shade5 {
+  background-image: url('../Assets/ProjectPhotos/Public//LittleShadesCreek/mobile/LittleShade5-mobile.jpg');
+  background-position-y: top;
+}
+.public-little-shade6 {
+  background-image: url('../Assets/ProjectPhotos/Public/LittleShadesCreek/mobile/LittleShade6-mobile.jpg');
+}
+.public-little-shade7 {
+  background-image: url('../Assets/ProjectPhotos/Public/LittleShadesCreek/mobile/LittleShade7-mobile.jpg');
+}
+
+.public-bessemer-park1 {
+  background-image: url('../Assets/ProjectPhotos/Public/BessemerPark/mobile/BessemerPark-1-mobile.jpg');
+}
+.public-bessemer-park2 {
+  background-image: url('../Assets/ProjectPhotos/Public/BessemerPark/mobile/BessemerPark-2-mobile.jpg');
+}
+.public-bessemer-park3 {
+  background-image: url('../Assets/ProjectPhotos/Public/BessemerPark/mobile/BessemerPark-3-mobile.jpg');
+}
+.public-bessemer-park4 {
+  background-image: url('../Assets/ProjectPhotos/Public/BessemerPark/mobile/BessemerPark-4-mobile.jpg');
+}
+.public-bessemer-park5 {
+  background-image: url('../Assets/ProjectPhotos/Public/BessemerPark/mobile/BessemerPark-5-mobile.jpg');
+}
+
+.public-morgan-drive1 {
+  background-image: url('../Assets/ProjectPhotos/Public/MorganDrive/mobile/MorganDrive1-mobile.jpg');
+  background-position-y: top;
+}
+
+.public-sidewalk1 {
+  background-image: url('../Assets/ProjectPhotos/Public/sidewalks/mobile/Sidewalk-1-mobile.jpg');
+}
+.public-sidewalk2 {
+  background-image: url('../Assets/ProjectPhotos/Public/sidewalks/mobile/Sidewalk-2-mobile.jpg');
+}
+.public-sidewalk3 {
+  background-image: url('../Assets/ProjectPhotos/Public/sidewalks/mobile/Sidewalk-3-mobile.jpg');
+}
+.public-sidewalk4 {
+  background-image: url('../Assets/ProjectPhotos/Public/sidewalks/mobile/Sidewalk-4-mobile.jpg');
+}
+
+
+/* MEDICAL PHOTOS */
+
+
+.medical-UAB1{
+  background-image: url('../Assets/ProjectPhotos/Medical/UAB/mobile/UAB1-mobile.jpg');
+}
+.medical-UAB2{
+  background-image: url('../Assets/ProjectPhotos/Medical/UAB/mobile/UAB2-mobile.jpg');
+}
+.medical-UAB3{
+  background-image: url('../Assets/ProjectPhotos/Medical/UAB/mobile/UAB3-mobile.jpg');
+}
+.medical-UAB4{
+  background-image: url('../Assets/ProjectPhotos/Medical/UAB/mobile/UAB4-mobile.jpg');
+}
+
+.medical-Dothan-Medical1 {
+  background-image: url('../Assets/ProjectPhotos/Medical/DothanMedical/mobile/DothanMedical1-mobile.jpg');
+}
+.medical-Dothan-Medical2 {
+  background-image: url('../Assets/ProjectPhotos/Medical/DothanMedical/mobile/DothanMedical2-mobile.jpg');
+}
+
+.medical-Medical-West1 {
+  background-image: url('../Assets/ProjectPhotos/Medical/MedicalWest/mobile/MedicalWest1-mobile.jpg');
+}
+.medical-Medical-West2 {
+  background-image: url('../Assets/ProjectPhotos/Medical/MedicalWest/mobile/MedicalWest2-mobile.jpg');
+}
+
+.medical-UAB-medicine1 {
+  background-image: url('../Assets/ProjectPhotos/Medical/UAB/mobile/UABMedicine-1-mobile.jpg');
+}
+.medical-UAB-medicine2 {
+  background-image: url('../Assets/ProjectPhotos/Medical/UAB/mobile/UABMedicine-2-mobile.jpg');
+}
+
+.medical-Dublin-VA1 {
+  background-image: url('../Assets/ProjectPhotos/Medical/DublinVA/mobile/DublinVA1-mobile.jpg')
+}
+.medical-Dublin-VA2 {
+  background-image: url('../Assets/ProjectPhotos/Medical/DublinVA/mobile/DublinVA2-mobile.jpg')
+}
+.medical-Dublin-VA3 {
+  background-image: url('../Assets/ProjectPhotos/Medical/DublinVA/mobile/DublinVA3-mobile.jpg')
+}
+
+.medical-Baptist-South1 {
+  background-image: url('../Assets/ProjectPhotos/Medical/BaptistSouth/mobile/BaptistSouth1-mobile.jpg')
+}
+
+
+/* EDUCATION PHOTOS */
+
+
+
+.education-Bolding-Gardens1 {
+  background-image: url('../Assets/ProjectPhotos/Education/BoldingGardens/mobile/BoldingGardens1-mobile.jpg')
+}
+.education-Bolding-Gardens2 {
+  background-image: url('../Assets/ProjectPhotos/Education/BoldingGardens/mobile/BoldingGardens2-mobile.jpg')
+}
+.education-Bolding-Gardens3 {
+  background-image: url('../Assets/ProjectPhotos/Education/BoldingGardens/mobile/BoldingGardens3-mobile.jpg')
+}
+.education-Bolding-Gardens4 {
+  background-image: url('../Assets/ProjectPhotos/Education/BoldingGardens/mobile/BoldingGardens4-mobile.jpg')
+}
+.education-Bolding-Gardens5 {
+  background-image: url('../Assets/ProjectPhotos/Education/BoldingGardens/mobile/BoldingGardens5-mobile.jpg')
+}
+.education-Bolding-Gardens6 {
+  background-image: url('../Assets/ProjectPhotos/Education/BoldingGardens/mobile/BoldingGardens6-mobile.jpg')
+}
+.education-Bolding-Gardens7 {
+  background-image: url('../Assets/ProjectPhotos/Education/BoldingGardens/mobile/BoldingGardens7-mobile.jpg')
+}
+.education-Bolding-Gardens8 {
+  background-image: url('../Assets/ProjectPhotos/Education/BoldingGardens/mobile/BoldingGardens8-mobile.jpg')
+}
+.education-Bolding-Gardens9 {
+  background-image: url('../Assets/ProjectPhotos/Education/BoldingGardens/mobile//BoldingGardens9-mobile.jpg')
+}
+
+.education-Brewer-Plaza1 {
+  background-image: url('../Assets/ProjectPhotos/Education/BrewerPlaza/mobile/BrewerPlaza1-mobile.jpg')
+}
+.education-Brewer-Plaza2 {
+  background-image: url('../Assets/ProjectPhotos/Education/BrewerPlaza/mobile/BrewerPlaza2-mobile.jpg')
+}
+.education-Brewer-Plaza3 {
+  background-image: url('../Assets/ProjectPhotos/Education/BrewerPlaza/mobile/BrewerPlaza3-mobile.jpg')
+}
+
+.education-Arena1 {
+  background-image: url('../Assets/ProjectPhotos/Education/Arena/mobile/Arena1-mobile.jpg')
+}
+.education-Arena2 {
+  background-image: url('../Assets/ProjectPhotos/Education/Arena/mobile/Arena2-mobile.jpg')
+}
+.education-Arena3 {
+  background-image: url('../Assets/ProjectPhotos/Education/Arena/mobile/Arena3-mobile.jpg')
+}
+.education-Arena4 {
+  background-image: url('../Assets/ProjectPhotos/Education/Arena/mobile/Arena4-mobile.jpg')
+}
+.education-Arena5 {
+  background-image: url('../Assets/ProjectPhotos/Education/Arena/mobile/Arena5-mobile.jpg')
+}
+.education-Arena6 {
+  background-image: url('../Assets/ProjectPhotos/Education/Arena/mobile/Arena6-mobile.jpg')
+}
+.education-Arena7 {
+  background-image: url('../Assets/ProjectPhotos/Education/Arena/mobile/Arena7-mobile.jpg')
+}
+.education-Arena8 {
+  background-image: url('../Assets/ProjectPhotos/Education/Arena/mobile/Arena8-mobile.jpg')
+}
+
+.education-Boren-Gardens1 {
+  background-image: url('../Assets/ProjectPhotos/Education/BorenGardens/mobile/BorenGardens1-mobile.jpg')
+}
+.education-Boren-Gardens2 {
+  background-image: url('../Assets/ProjectPhotos/Education/BorenGardens/mobile/BorenGardens2-mobile.jpg')
+}
+.education-Boren-Gardens3 {
+  background-image: url('../Assets/ProjectPhotos/Education/BorenGardens/mobile/BorenGardens3-mobile.jpg')
+}
+.education-Boren-Gardens4 {
+  background-image: url('../Assets/ProjectPhotos/Education/BorenGardens/mobile/BorenGardens4-mobile.jpg')
+}
+.education-Boren-Gardens5 {
+  background-image: url('../Assets/ProjectPhotos/Education/BorenGardens/mobile/BorenGardens-5-mobile.jpg')
+}
+.education-Boren-Gardens6 {
+  background-image: url('../Assets/ProjectPhotos/Education/BorenGardens/mobile/BorenGardens-6-mobile.jpg')
+}
+
+
+.education-Samford-Selects1 {
+  background-image: url('../Assets/ProjectPhotos/Education/SamfordSelects/mobile/SamfordSelects1-mobile.jpg')
+}
+.education-Samford-Selects2 {
+  background-image: url('../Assets/ProjectPhotos/Education/SamfordSelects/mobile/SamfordSelects2-mobile.jpg')
+}
+.education-Samford-Selects3 {
+  background-image: url('../Assets/ProjectPhotos/Education/SamfordSelects/mobile/SamfordSelects3-mobile.jpg')
+}
+.education-Samford-Selects4 {
+  background-image: url('../Assets/ProjectPhotos/Education/SamfordSelects/mobile/SamfordSelects4-mobile.jpg')
+}
+.education-Samford-Selects5 {
+  background-image: url('../Assets/ProjectPhotos/Education/SamfordSelects/mobile/SamfordSelects5-mobile.jpg')
+}
+.education-Samford-Selects6 {
+  background-image: url('../Assets/ProjectPhotos/Education/SamfordSelects/mobile/SamfordSelects6-mobile.jpg')
+}
+
+.education-lawson-state1 {
+  background-image: url('../Assets/ProjectPhotos/Education/LawsonState/mobile/LawsonState1-mobile.jpg');
+}
+
+.education-UWA1 {
+  background-image: url('../Assets/ProjectPhotos/Education/UWA/mobile/UWA-1-mobile.jpg');
+}
+
+.education-4h-center1 {
+  background-image: url('../Assets/ProjectPhotos/Education/4HCenter/mobile/4HCenter-1-mobile.jpg');
+}
+.education-4h-center2 {
+  background-image: url('../Assets/ProjectPhotos/Education/4HCenter/mobile/4HCenter-2-mobile.jpg');
+}
+.education-4h-center3 {
+  background-image: url('../Assets/ProjectPhotos/Education/4HCenter/mobile/4HCenter-3-mobile.jpg');
+}
+
+
+/* RELIGIOUS PHOTOS */
+
+
+.religious-highland-church1 {
+  background-image: url('../Assets/ProjectPhotos/Religious/HighlandsUM/mobile/HighlandsUnitedMethodist-1-mobile.jpg');
+}
+.religious-highland-church2 {
+  background-image: url('../Assets/ProjectPhotos/Religious/HighlandsUM/mobile/HighlandsUnitedMethodist-2-mobile.jpg');
+}
+.religious-highland-church3 {
+  background-image: url('../Assets/ProjectPhotos/Religious/HighlandsUM/mobile/HighlandsUnitedMethodist-3-mobile.jpg');
+}
+.religious-highland-church4 {
+  background-image: url('../Assets/ProjectPhotos/Religious/HighlandsUM/mobile/HighlandsUnitedMethodist-4-mobile.jpg');
+}
+
+.religious-mountain-church1 {
+  background-image: url('../Assets/ProjectPhotos/Religious/MtnChurch/mobile/MtnChurch-1-mobile.jpg');
+}
+
+
+/* RESIDENTIAL PHOTOS */
+
+.residential-1 {
+  background-image: url('../Assets/ProjectPhotos/Residential/mobile/Residential-1-mobile.jpg');
+}
+.residential-2 {
+  background-image: url('../Assets/ProjectPhotos/Residential/mobile/Residential-2-mobile.jpg');
+}
+.residential-3 {
+  background-image: url('../Assets/ProjectPhotos/Residential/mobile/Residential-3-mobile.jpg');
+}
+.residential-4 {
+  background-image: url('../Assets/ProjectPhotos/Residential/mobile/Residential-4-mobile.jpg');
+}
+.residential-5 {
+  background-image: url('../Assets/ProjectPhotos/Residential/mobile/Residential-5-mobile.jpg');
+}
+
+/* COMMERCIAL PHOTOS */
+
+.commercial-golds-gym1 {
+  background-image: url('../Assets/ProjectPhotos/Commercial/GoldsGym/mobile/GoldsGym-1-mobile.jpg');
+}
+.commercial-golds-gym2 {
+  background-image: url('../Assets/ProjectPhotos/Commercial/GoldsGym/mobile/GoldsGym-2-mobile.jpg');
+}
+
+.commercial-CandM1 {
+  background-image: url('../Assets/ProjectPhotos/Commercial/CM/mobile/CM-1-mobile.jpg');
+}
     
     
   }
