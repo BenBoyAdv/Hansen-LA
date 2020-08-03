@@ -1013,6 +1013,7 @@ a:link, a:visited {
 
   .control-box {
     top: 2%;
+    opacity: 0;
   }
   .slideControls
 {
@@ -1027,7 +1028,7 @@ a:link, a:visited {
 
   @keyframes boxGrow {
     0% {height: 4.4em;}
-    100% {height: 10em;}
+    100% {height: 19em;}
   }
 
   .inactive {
