@@ -627,6 +627,15 @@ a:link, a:visited {
   font-size: 2em;
 }
 
+.project-box p {
+  position: relative;
+  font-family: 'Raleway', sans-serif;
+  color: #FFFFF2;
+  font-size: 1.5rem;
+  top: 4em;
+  left: 1em;
+}
+
 .project-box:hover 
 {
   opacity: 1.0;
@@ -945,12 +954,8 @@ a:link, a:visited {
 .rotate-icon{
   position: absolute;
   opacity: 0.6;
-
-  left: 25%;
-  top: 55%;
-  /* height: 1em; */
-  
-  /* transform: rotate(90deg); */
+  text-align: center;
+  bottom: 10%;
 }
 
 .rotate-icon img {
@@ -996,6 +1001,15 @@ a:link, a:visited {
     height: 4.4em;
     /* line-height: 0; */
   }  
+
+  .project-box p {
+    position: relative;
+    font-family: 'Raleway', sans-serif;
+    color: #FFFFF2;
+    font-size: 1.5rem;
+    top: 4em;
+    left: 1em;
+  }
 
   .control-box {
     top: 2%;
@@ -1252,9 +1266,7 @@ a:link, a:visited {
   .about-container {
     height: 100%;
   }
-  .project-box {
-    padding-top: 15%;
-  }
+  
   
 }
 @media only screen and (max-width: 395px) {

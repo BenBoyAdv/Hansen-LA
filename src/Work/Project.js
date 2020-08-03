@@ -40,7 +40,7 @@ class Project extends React.Component
           onClick={!this.props.anyActive ? this.handleClick : console.log('click-off')}
           className={this.props.isHeading ? '' : 'select-project'}
         >
-          {!this.props.isActive || this.props.isTransition ? `${this.props.name}` : ''}
+          <p>{!this.props.isActive || this.props.isTransition ? `${this.props.name}` : ''}</p>
           {/* {`${this.props.name}`} */}
           <div id="close-box"
             onClick={this.closeBox}

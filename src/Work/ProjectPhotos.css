@@ -315,37 +315,30 @@
     width: 100%;
     background-image: linear-gradient(to right, #FFFFF2, #FFFFFF);
     opacity: 1;
+    border: none;
+    
   }
   
   @keyframes header-grow {
-    0% {height: 0em; opacity: 0; padding: 0em 0em 0em 0em;}
+    0% {height: 0em; opacity: 0; padding: 0em 0em 0em 1.2em;}
     100% {
       padding: 0.7em 0em 0.7em 1.2em;
-      font-family: 'Raleway', sans-serif;
-      color: #60a568;
-      letter-spacing: 0.3em;
-      font-size: 3em;
       height: 4.5em;
-      width: 100%;
-      background-image: linear-gradient(to right, #FFFFF2, #FFFFFF);
       opacity: 1;
     }
   }
  .header-grow {
-   height: 4.5em;
-   opacity: 1;
    animation-name: header-grow;
    animation-duration: 0.5s;
    animation-fill-mode: forwards;
   }
   
   @keyframes header-shrink {
-    0% {height: 4.5em; opacity: 1; padding: 0.7em 0em 0.7em 1em;}
-    100% {height: 0em; opacity: 0;padding: 0em 0em 0em 0em;}
+    0% {height: 4.5em; opacity: 1; padding: 0.7em 0em 0.7em 1.2em;}
+    5% { opacity: 0;}
+    100% {height: 0em; opacity: 0; padding: 0em 0em 0em 1.2em;}
   }
   .header-shrink {
-    height: 0em;
-    opacity: 0;
     animation-name: header-shrink;
     animation-duration: 0.5s;
     animation-fill-mode: forwards;
@@ -358,43 +351,33 @@
       font-size: 2em;
       letter-spacing: 0.5em;
       padding: 0.5em 0em 0.02em 0.5em;
-      line-height: 1em;
     }
 
     @keyframes header-grow {
-      0% {height: 0em; opacity: 0; padding: 0em 0em 0em 0em;}
+      0% {height: 0em; opacity: 0; padding: 0em 0em 0em 0.5em;}
       100% {
+        padding: 0.5em 0em 0.02em 0.5em;
         height: 4em;
-        font-size: 2em;
-      letter-spacing: 0.5em;
-      padding: 0.5em 0em 0.02em 0.5em;
+        opacity: 1;
       }
     }
    .header-grow {
-    height: 4em;
-    font-size: 2em;
-    letter-spacing: 0.5em;
-    padding: 0.5em 0em 0.02em 0.5em;
      animation-name: header-grow;
      animation-duration: 0.5s;
      animation-fill-mode: forwards;
     }
     
     @keyframes header-shrink {
-      0% {
-        height: 4em;
-        font-size: 2em;
-      letter-spacing: 0.5em;
-      padding: 0.5em 0em 0.02em 0.5em;
-      }
-      100% {height: 0em; opacity: 0;padding: 0em 0em 0em 0em;}
+      0% {height: 4em; opacity: 1; padding: 0.5em 0em 0.02em 0.5em;}
+      5% { opacity: 0;}
+      100% {height: 0em; opacity: 0; padding: 0em 0em 0em 0.5em;}
     }
     .header-shrink {
-      height: 0em;
-      font-size: 2em;
-      letter-spacing: 0.5em;
-      padding: 0.5em 0em 0.02em 0.5em;
+      animation-name: header-shrink;
+      animation-duration: 0.5s;
+      animation-fill-mode: forwards;
     }
+    
 
 
 
