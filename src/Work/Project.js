@@ -97,6 +97,7 @@ class Project extends React.Component
     return(
       <div
         id={this.props.name}
+        loading="lazy"
         className=
         {
           this.projectDisplayType()
