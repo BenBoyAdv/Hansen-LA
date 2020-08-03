@@ -23,7 +23,6 @@ const projectLib = {
             projectPhotos:[
                 'public-little-shade1',
                 'public-little-shade2',
-                'public-little-shade3',
                 'public-little-shade4',
                 'public-little-shade5',
                 'public-little-shade6',

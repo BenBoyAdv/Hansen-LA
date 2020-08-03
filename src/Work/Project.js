@@ -41,6 +41,7 @@ class Project extends React.Component
           className={this.props.isHeading ? '' : 'select-project'}
         >
           {!this.props.isActive || this.props.isTransition ? `${this.props.name}` : ''}
+          {/* {`${this.props.name}`} */}
           <div id="close-box"
             onClick={this.closeBox}
             className=
@@ -82,7 +83,7 @@ class Project extends React.Component
       return (
         (this.props.isActive && this.props.isTransition) ? `a-transition ${this.props.projectPhotos[this.state.activeSlide]}` : 
         this.props.isActive ? `active ${this.props.projectPhotos[this.state.activeSlide]}` : 
-        (!this.props.isActive && this.props.isTransition && this.props.isHeading) ? `section-head` : 
+        (!this.props.isActive && this.props.isTransition && this.props.isHeading) ? `section-head header-grow` : 
         (!this.props.isActive && this.props.isTransition) ? `b-transition ${this.props.projectPhotos[this.state.activeSlide]}` : 
         (this.props.anyActive && this.props.isHeading) ? `section-head header-shrink` : 
         this.props.anyActive ? `inactive ${this.props.projectPhotos[this.state.activeSlide]}` : 

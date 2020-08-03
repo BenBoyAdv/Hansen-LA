@@ -14,7 +14,7 @@ class ProjectContainer extends React.Component {
         this.setState({activeIndex:index, anyActive:true, transition:true})
         setTimeout(()=>{
             this.setState({activeIndex:null, anyActive:false, transition:false})
-        },1000)
+        },500)
     }
 
     handleClick = index => {

@@ -619,86 +619,76 @@ a:link, a:visited {
   height: 5em;
   width: 100%;
   opacity: 0.8;
-  padding-left: 5%;
-  /* transition: opacity 1s, background-position-y 1s; */
   background-size: 100%;
   background-repeat: no-repeat;
   background-position-y: center; 
   font-family: 'Raleway', sans-serif;
   color: #FFFFF2;
-  line-height: 8em;
   font-size: 2em;
 }
 
 .project-box:hover 
 {
-  /* height: 5.3em; */
   opacity: 1.0;
 }
 
 .active
 {
-  padding-left: 5%;
   color: transparent;
-  line-height: 0em;
-  height: 11em;
+  height: 25em;
   width: 100%;
   opacity: 1.0;
-  border: none;
   background-size: 100%;
   background-repeat: no-repeat;
   animation-name: boxGrow;
   animation-fill-mode: forwards;
-  animation-duration: 1s;
-  /* transition: background-image 0.5s; */
+  animation-duration: 0.5s;
+  transition: background-image 0.5s;
 }
 
 @keyframes boxGrow
 {
-  0% {height: 11em;}
-  100% {height: 50em;}
+  0% {height: 5em;}
+  100% {height: 25em;}
 }
 
 .inactive
 {
-  padding-left: 5%;
   color: transparent;
-  height: 10em;
+  height: 0em;
   width: 100%;
   opacity: 0.8;
-  border: none;
   animation-name: boxShrink;
   animation-fill-mode: forwards;
-  animation-duration: 1s;
-  /* transition: background-image 0.5s, background-position-y 1s; */
+  animation-duration: 0.5s;
   background-size: 100%;
   background-repeat: no-repeat;
 }
 
 @keyframes boxShrink
 {
-  from {height: 10em; opacity: 0.8; border: none;}
-  to {height: 0em; opacity: 0.0; border: none;}
+  from {height: 5em; opacity: 0.8;}
+  to {height: 0em; opacity: 0.0;}
 }
 
 
 @keyframes aTransition
 {
-  from {height: 42em; opacity: 1.0; background-position-y: top;}
-  to {height: 5em; opacity: 0.8; background-position-y: center;}
+  from {height: 25em; opacity: 1.0; }
+  to {height: 5em; opacity: 0.8;}
 }
 
 .a-transition
 {
-  padding-left: 5%;
+  /* padding-left: 5%; */
   color: transparent;
   font-size: 2em;
-  height: 42em;
+  height: 5em;
   width: 100%;
   opacity: 1.0;
   animation-name: aTransition;
   animation-fill-mode: forwards;
-  animation-duration: 1s;
+  animation-duration: 0.5s;
   /* transition: background-image 0.5s, background-position-y 1s; */
   background-size: 100%;
   background-repeat: no-repeat;
@@ -708,21 +698,20 @@ a:link, a:visited {
 @keyframes bTransition
 {
   from{height: 0em; opacity: 0.0;}
-  to{height: 10em; opacity: 0.8;}
+  to{height: 5em; opacity: 0.8;}
 }
 
 .b-transition
 {
-  padding-left: 5%;
+  /* padding-left: 5%; */
   color: transparent;
-  height: 0em;
+  font-size: 2em;
+  height: 5em;
   width: 100%;
-  opacity: 0.0;
-  border: none;
+  opacity: 0.8;
   animation-name: bTransition;
   animation-fill-mode: forwards;
-  animation-duration: 1s;
-  /* transition: background-image 0.5s, background-position-y 1s; */
+  animation-duration: 0.5s;
   background-size: 100%;
   background-repeat: no-repeat;
   background-position-y: center;
@@ -985,88 +974,7 @@ a:link, a:visited {
   }
   
   
-  .project-box {
-    height: 4.4em;
-    font-family: 'Raleway', sans-serif;
-  color: #FFFFF2;
-  line-height: 8em;
-  font-size: 2em;
-  }
-  .project-box:hover 
-  {
-    height: 4.4em;
-}
-
-.active {
-  background-size: 100%;
-  height: 4.4em;
-  animation-name: boxGrow;
-  background-position-y: top;
-  
-}
-
-@keyframes boxGrow {
-  0% {height: 4.4em;}
-  100% {height: 26.5em;}
-}
-
-@keyframes aTransition
-{
-from {
-  height: 26.5em; 
-  opacity: 1.0; 
-  background-position-y: top;
-  font-family: 'Raleway', sans-serif;
-  color: #FFFFF2;
-  line-height: 8em;
-  font-size: 2em;
-}
-to {height: 4.4em; 
-  opacity: 1.0; 
-  background-position-y: center;
-  font-family: 'Raleway', sans-serif;
-  color: #FFFFF2;
-  line-height: 8em;
-  font-size: 2em;
-}
-}
-
-.a-transition
-{
-  height: 26.5em;
-  font-family: 'Raleway', sans-serif;
-  color: #FFFFF2;
-  line-height: 8em;
-  font-size: 2em;
-}
-
-@keyframes bTransition
-{
-from{
-  height: 0em; 
-  opacity: 0.0;
-  font-family: 'Raleway', sans-serif;
-  color: #FFFFF2;
-  line-height: 8em;
-  font-size: 2em;
-}
-to{
-  height: 4.4em; 
-  opacity: 1.0;
-  font-family: 'Raleway', sans-serif;
-  color: #FFFFF2;
-  line-height: 8em;
-  font-size: 2em;
-}
-}
-
-.b-transition
-{height: 0em;}
-
-.project-container {
-  padding-top: 1%;
-  height: 86%;
-}
+ 
 
 
 
@@ -1084,27 +992,64 @@ to{
 
 @media only screen and (max-width: 710px) {
   
-  .select-project {
-    height: 100%;
+  .project-box {
+    height: 4.4em;
+    /* line-height: 0; */
+  }  
+
+  .control-box {
+    top: 2%;
   }
+  .slideControls
+{
+  height: 3em;
+  width: 3em;
+ 
+}
 
   .active {
-    position: absolute;
-    width: 100vw;
-    height: 5em;
-    background-position-y: top;
+    height: 10em;
   }
-  .project-box{
-    width: 100vw;
+
+  @keyframes boxGrow {
+    0% {height: 4.4em;}
+    100% {height: 10em;}
   }
-  /* .work-fade {
-    position: absolute;
-    display: block;
-    height: 10%;
-    width: 100%;
-    z-index: 20;
-    bottom: 140px;
-  } */
+
+  .inactive {
+    height: 0em;
+  }
+
+  @keyframes boxShrink
+{
+  from {height: 4.4em; opacity: 0.8; }
+  to {height: 0em; opacity: 0.0;}
+}
+
+@keyframes aTransition
+{
+  from {height: 10em;}
+  to {height: 4.4em;}
+}
+
+.a-transition
+{
+  height: 4.4em;
+}
+
+
+@keyframes bTransition
+{
+  0% {height: 0em; opacity: 0.0;}
+  100% {height: 4.4em; opacity: 0.8;}
+}
+
+.b-transition
+{
+  height: 4.4em;
+}
+  
+
   .nav-bar {
     display: flex;
     flex-wrap: wrap;
@@ -1225,7 +1170,6 @@ to{
 
   .project-box {
     opacity: 1.0;
-    /* background-size: contain; */
   }
   
 
@@ -1235,14 +1179,11 @@ to{
     width: 100vw;
   }
 
-  .active {
-    /* position: fixed; */
+  /* .active {
     top: 0;
     background-size: 100%;
     background-position-y: top;
-    
-    /* box-shadow: 10px 10px 8px #888888; */
-  }
+  } */
 
   
 
@@ -1311,6 +1252,9 @@ to{
   .about-container {
     height: 100%;
   }
+  .project-box {
+    padding-top: 15%;
+  }
   
 }
 @media only screen and (max-width: 395px) {
@@ -1347,10 +1291,7 @@ to{
     margin-right: 0em;
   }
 
-  .project-box {
-    height: 3.8em;
-    line-height: 3.8em;
-  }
+  
 
 
 }
@@ -1387,22 +1328,15 @@ to{
     top: 0;
   }
 
-  .active {
-    position: fixed;
-    background-size: 100%;
-    background-position-y: top;
-    height: 4.5em;
-    animation-name: boxGrow;
-  }
-
+  
   .close-button {
     height: 1em;
     width: 1em;
   }
 
   @keyframes boxGrow {
-    0% {height: 4.5em;}
-    100% {height: 25em;}
+    0% {height: 4.4em;}
+    100% {height: 19em;}
   }
 
   /* .work-fade {
@@ -1419,9 +1353,7 @@ to{
     height: 86.5vh;
   }
 
-  .active {
-    background-size: cover;
-  }
+  
 
   .about-container {
     top: 33%;
