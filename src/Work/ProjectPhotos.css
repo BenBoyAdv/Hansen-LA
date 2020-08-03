@@ -58,6 +58,19 @@
   background-position-y: top;
 }
 
+.public-sidewalk1 {
+  background-image: url('../Assets/ProjectPhotos/Public/sidewalks/Sidewalk-1.jpg');
+}
+.public-sidewalk2 {
+  background-image: url('../Assets/ProjectPhotos/Public/sidewalks/Sidewalk-2.jpg');
+}
+.public-sidewalk3 {
+  background-image: url('../Assets/ProjectPhotos/Public/sidewalks/Sidewalk-3.jpg');
+}
+.public-sidewalk4 {
+  background-image: url('../Assets/ProjectPhotos/Public/sidewalks/Sidewalk-4.jpg');
+}
+
 
 /* MEDICAL PHOTOS */
 

@@ -52,6 +52,17 @@ const projectLib = {
             isHeading: false,
             headingText: ''
         },
+        {
+            name: "SIDEWALKS", 
+            projectPhotos:[
+                'public-sidewalk1',
+                'public-sidewalk2',
+                'public-sidewalk3',
+                'public-sidewalk4',
+            ],
+            isHeading: false,
+            headingText: ''
+        }
     ],
     medicalProjects : 
     [
