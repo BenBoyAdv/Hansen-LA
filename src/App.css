@@ -620,7 +620,7 @@ a:link, a:visited {
   width: 100%;
   opacity: 0.8;
   padding-left: 5%;
-  transition: opacity 1s, background-position-y 1s;
+  /* transition: opacity 1s, background-position-y 1s; */
   background-size: 100%;
   background-repeat: no-repeat;
   background-position-y: center; 
@@ -999,21 +999,21 @@ a:link, a:visited {
 
 .active {
   background-size: 100%;
-  height: 4.5em;
+  height: 4.4em;
   animation-name: boxGrow;
   background-position-y: top;
   
 }
 
 @keyframes boxGrow {
-  0% {height: 4.5em;}
+  0% {height: 4.4em;}
   100% {height: 26.5em;}
 }
 
 @keyframes aTransition
 {
 from {
-  height: 35em; 
+  height: 26.5em; 
   opacity: 1.0; 
   background-position-y: top;
   font-family: 'Raleway', sans-serif;
@@ -1033,7 +1033,7 @@ to {height: 4.4em;
 
 .a-transition
 {
-  height: 35em;
+  height: 26.5em;
   font-family: 'Raleway', sans-serif;
   color: #FFFFF2;
   line-height: 8em;
